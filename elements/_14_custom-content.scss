@@ -1,0 +1,37 @@
+
+.custom-content {	
+	.video-content {
+		position: relative;
+		padding-bottom: 56.25%;
+		height: 0;
+		iframe {
+			@include ab(0,0,n,0);
+			height: 100%;
+			width: 100%;
+		}
+	}
+	.section_title-wrapper {
+		.section_title-inner {
+			max-width: 787px;
+			margin: 0 auto;
+		}
+		.section_title-text-1 {
+			margin-bottom: 12px;
+			font-family: "Abhaya Libre";
+		}
+	}	
+}
+.home-custom-content {
+	p {
+		margin: 0;
+	}
+	.card_section-figure {
+		display: flex;
+		> span {
+			padding-right: 20px;
+		}
+		p {
+			max-width: 1180px;
+		}
+	}
+}

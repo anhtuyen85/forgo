@@ -1,0 +1,67 @@
+.announcement-bar {	
+	.wrapper {
+		padding: 10px 0;
+		align-items: center;
+	}
+	.annoubar-column {
+		text-transform: uppercase;
+		font-size: calc(var(--body-font-size) - 2px);  
+		display: flex;
+		align-items: center;
+		line-height: 28px;
+		.menu-list {
+			display: flex;
+			flex-wrap: wrap;
+			li {
+				padding: 0 10px;
+				&:first-child {
+					padding-inline-start: 0;
+				}
+			}
+		}
+		p {
+			margin: 0;
+		}
+		svg {
+			width: 14px;
+			height: 14px;
+		}
+		.account {
+			display: flex;
+			align-items: center;
+			>a {
+				padding: 0px 12px;
+				display: flex;
+			}
+			.account-action {
+				a[href="/account/register"] {
+					margin-inline-start: 6px;
+					padding-inline-start: 8px;
+					border-left: 1px solid currentColor;
+				}
+			}
+			>a {
+				svg {
+					@include margin-end(5px)
+				}
+			}
+		}
+		.annoubar-item {
+			display: flex;
+		}
+		.currency-with-language {
+			padding: 0 12px;
+			height: 14px;
+			margin-top: -1px;
+			a {
+				height: 14px;
+				display: block;
+			}
+		}
+	}
+}
+#shopify-section-announcement-bar {
+	@media (max-width: 991px) {
+		border-bottom: none;
+	}
+}

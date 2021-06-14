@@ -1,0 +1,24 @@
+.home-blog {
+	.section_content-body {
+		position: relative;
+	}
+	.featured_blog__item-image {
+		position: relative;
+		margin-bottom: 16px;
+	}
+	.featured_blog__item-publish {
+		@include ab(0,0,n,n);
+		padding: 8px 12px;
+		background: var(--body-color);
+		color: var(--text-miscellaneous);
+		min-width: 120px;
+		text-align: center;
+	}
+	.featured_blog__item-title {
+		margin-bottom: 8px;
+	}
+	.featured_blog__item-excerpt {
+		line-height: 21px;
+		color: var(--body-second-color);
+	}
+}

@@ -1,0 +1,93 @@
+.home-slideshow {
+	.section-content {
+		position: relative;
+		.slide-content-inner {
+			padding: 0 var(--gutter-xs);
+			width: 100%;
+		}
+	}
+	.slide-content-inner >div {
+		animation-fill-mode: backwards;
+		animation-iteration-count: 1;
+	}
+	.section-content-wrapper {
+		.overlay-ui:not(img) {
+			display: table;
+			width: fit-content;
+		}
+	}
+	.slideshow-wrapper {
+		.col-12 {
+			padding: 0;
+		}
+		.slide-item {
+			position: relative;
+		}
+		.content-product_label {
+			.label_ui {
+				display: inline-block;
+			}
+		}
+		.content-text-3 {
+			letter-spacing: 0.5px;
+		}
+		.content-product .product-price {
+			margin: 0;
+		}
+		.slide-content-wrapper {
+			@include ab(0,0,0,0);
+			max-width: 1200px;
+			margin: 0 auto;
+			width: 100%;
+			padding: 0 var(--gutter-xs);
+		}
+		.content-sale-label {
+			width: 66px;
+			height: 66px;
+			line-height: 1.2;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;        
+			font-weight: 700;
+			font-size: 4.5rem;
+			background-color: var(--btn1-bg-cl);
+			color: var(--btn1-cl);
+			@extend %radius-circle;
+			&.overlay-ui {                        
+				@include translate(-54%, -20%);
+				@include ab(20%, 54%, n, n);
+			}
+			.sale-label {
+				display: flex;
+				margin-bottom: 3px;
+			}
+		}  
+	}
+	.js-slider-controls {
+		.js-prev-button {
+			@include ab(n,3%,n,n);
+		}
+		.js-next-button {
+			@include ab(n,n,n,3%);
+		}
+	}
+	.js-slider-dots {
+		@include ab(n,n,25px,n);
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		a {
+			width: 12px;
+			height: 12px;
+			margin: 0 7px;
+			opacity: 0.5;
+			background: var(--body-second-color);
+			@extend %radius-circle;
+			position: relative;
+			&:hover, &.tns-nav-active {
+				opacity: 1;
+			}
+		}
+	}
+}

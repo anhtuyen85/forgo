@@ -1,0 +1,43 @@
+.page-search {
+	margin-bottom: 70px;
+	margin-top: 40px;
+	.page_title {
+		margin-bottom: 30px;
+	}
+	.page_search-form {
+		max-width: 500px;
+		margin: 0 auto;
+		padding-bottom: 40px;
+		.form-group {
+			position: relative;
+			input {
+				@include padding-end(50px);
+				height: 45px;
+				background: var(--miscellaneous-color);
+				border-radius: 0;
+			}
+		}
+		.btn {
+			@include ab(0,n,n,0);
+			width: 50px;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			padding: 0;
+			color: var(--btn1-cl);
+			border-radius: 0;
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+	.pagination-holder {
+		margin-top: 40px;
+	}
+	@media (min-width: 768px) {
+		margin-bottom: 100px;
+	}
+}

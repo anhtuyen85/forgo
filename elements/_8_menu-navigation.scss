@@ -1,0 +1,256 @@
+.menu-list {
+	.menu-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		font-size: var(--body-font-size);
+		svg {
+			width: 10px;
+			height: 10px;
+			position: relative;
+			top: 1px;
+		}
+	}
+}
+.main-menu {
+	.menu-item {
+		.dropdown-menu {
+			@extend %transition;
+			transform: translateY(5px);
+			&:not(.lazyloaded) {
+				min-height: 50px;
+				display: flex;
+			}
+			ul {
+				padding: 5px 0;
+				width: 100%;
+				>li {
+					height: auto;
+					line-height: 1.5;
+					padding: 9px 15px;
+					font-size: var(--body-14);
+					position: relative;
+					&:not(:last-child) {
+						border-bottom: 1px solid var(--body-border-color);
+					}
+					a {
+						transition: unset;
+					}
+				}
+			}
+		}
+		&:hover {
+			@media (min-width: 992px) {
+				.dropdown-menu {						
+					opacity: 1;
+					visibility: visible;
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+	.mega-menu {
+		.mega-menu-list {
+			padding: 20px;
+		}
+		.title {
+			>a {
+				text-transform: uppercase;
+				display: block;
+				padding-bottom: 10px;
+				font-weight: 500;
+			}
+		}
+		.dropdown-menu {
+			ul {
+				padding: 0;
+			}
+			.mega-menu-item {
+				padding: 0 15px;
+				margin-bottom: 15px;
+				.mul-product_wrapper {
+					li {
+						border: 0;
+						padding: 5px 0;
+						&:not(:first-child) {
+							margin-bottom: 10px;
+						}
+					}
+					.label {
+						position: relative;
+						margin-bottom: 5px;
+						right: auto;
+						display: block;
+					}
+				}
+			}
+			.menu-list .menu-item {
+				border: 0;
+				padding: 5px 0;
+			}
+		}
+		.menu-list .menu-item {
+			display: block;
+		}
+		.menu-list_wrapper {
+			>li:first-child {
+				margin-bottom: 15px;
+			}
+		}
+		.banner_wrapper {
+			>div {
+				padding-bottom: 15px;
+			}
+			.text-center>div {
+				padding: 30px 0;
+			}
+			.text-container {
+				padding: 15px 20px;
+				p {
+					margin: 0;
+					color: var(--color-second);
+					line-height: 1.4;
+				}
+				.text-1 {
+					margin-bottom: 15px;
+					color: var(--main-color);
+				}
+			}
+			.section-under {
+				display: block;
+				margin-top: 20px;
+				img {
+					margin-bottom: 10px;
+				}
+			}
+		}
+		.product-card {
+			.product-card_row {
+				>* {
+					line-height: initial;
+				}
+			}
+			.card-button {
+				svg {
+					width: 20px;
+					height: 20px;
+				}
+			}
+			.product-card_action {
+				display: none;
+			}
+		}
+	}
+	.mul-product {
+		.image {
+			width: 30%;
+			max-width: 85px;
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.info {
+			flex: 1;
+			@include padding-start(15px);
+		}
+	}
+}
+.header-container {
+	.dropdown-menu {
+		min-width: 250px;
+		@include ab(100%,0,n,0);
+		opacity: 0;
+		visibility: hidden;
+		z-index: 111;
+		background: #fff;
+		/* will-change: transform; */
+	}
+	.svg_element-ui {
+		display: flex;
+		align-items: center;
+		margin-left: 8px;
+	}
+	.horizontal-nav {
+		>ul {
+			li.dropdown-submenu {
+				li.dropdown-submenu {					
+					.dropdown-menu {
+						@include ab(0,100%,n,n);
+						opacity: 0;
+						visibility: hidden;
+						transform: translateY(5px);
+					}
+					&:hover {
+						@media (min-width: 992px) {							
+							.dropdown-menu {						
+								opacity: 1;
+								visibility: visible;
+								transform: translateY(0);
+							}
+						}
+					}
+				}
+			}
+		}
+		.menu-item:not(.dropdown-submenu) {
+			.svg_element-ui {
+				display: none;
+			}
+		}
+	}
+}
+
+.header-mobile {
+	.menu-list {
+		>li.menu-item {
+			padding-top: 15px;
+			padding-bottom: 15px;
+			&.h-auto {
+				height: auto;
+			}
+		}
+	}
+	.mega-banner {
+		>div {
+			padding-bottom: 15px;
+		}
+		.text-center>div {
+			padding: 30px 0;
+		}
+		.text-container {
+			padding: 15px 20px;
+			p {
+				margin: 0;
+				color: var(--color-second);
+				line-height: 1.4;
+			}
+			.text-1 {
+				margin-bottom: 15px;
+				color: var(--main-color);
+			}
+		}
+		.section-under {
+			display: block;
+			margin-top: 20px;
+			img {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.mega-product {
+		.image {
+			width: 30%;
+			max-width: 85px;
+			svg {
+				width: 100%;
+				height: 100%;
+			} 
+		}
+		.info {
+			flex: 1;
+			@include padding-start(15px);
+		}
+	}
+}
