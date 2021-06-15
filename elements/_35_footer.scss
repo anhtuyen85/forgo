@@ -2,6 +2,7 @@
 	border-bottom: none;
 }
 .footer {
+	@include font-medium;	
 	.card_footer-item {
 		padding: 1.938rem 1.5rem;
 		@media (min-width: 992px) {
@@ -19,13 +20,14 @@
 	.card_footer-title {
 		margin: 0 0 1.25rem;
 		text-transform: uppercase;	
-		@include font-medium;		
+		@include letter-spacing;			
 	}
 	.menu_list-wrapper {
 		li {
 			a {
 				display: inline-block;
 				line-height: 30px;
+				text-transform: uppercase;
 			}
 			&:not(:last-child) {
 				margin-bottom: 0.625rem;
@@ -35,7 +37,7 @@
 	.home-newsletter {
 		.main__text-2 {
 			text-transform: uppercase;
-			margin-bottom: 30px;			
+			margin-bottom: 30px;				
 			&:before {
 				content: '';
 				width: 0.688rem;

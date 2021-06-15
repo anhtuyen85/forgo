@@ -85,9 +85,12 @@
 @mixin font-medium {
   font-family: 'TTNormsPro-Medium', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-@function calculateRem($size) {
-  @return calc($size / 16px * 1rem);
- }
+@mixin letter-spacing {
+  letter-spacing: -1px;
+}
+@mixin font-heading {
+  font-family: var(--ff-heading);
+}
 %list-style-reset {
     list-style: none;
 }

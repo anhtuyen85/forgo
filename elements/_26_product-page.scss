@@ -19,10 +19,7 @@
 		}
 	}
 	.select-wrapper {
-		position: relative;
-		select {
-			padding: 0 15px;
-		}
+		position: relative;		
 		.svg_element-ui {
 			@include ab(n,n,n,16px);
 			height: 100%;

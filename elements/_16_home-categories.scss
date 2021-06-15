@@ -32,9 +32,11 @@
 		}
 	}
 	.card_section-text-1 {
-		line-height: 4.2.5rem;
-		font-size: 3.1.875rem;
-		margin: 0 0 8px;
+		line-height: 2.5rem;
+		font-size: 1.875rem;
+		margin: 0 0 8px;		
+		@include font-heading;
+		@include letter-spacing;
 		@media (min-width: 992px) {
 			line-height: 4.188rem;
 			font-size: 3.125rem;
@@ -48,6 +50,20 @@
 			line-height: 30px;
 			font-size: 18px;
 			margin-bottom: 30px;
+		}
+	}
+	.slider-wrapper {
+		.slider-item {
+			&:not(:last-child) {
+				.card_section-item-inner {
+					&:after {
+						content: '';
+						width: 1px;
+						background: var(--body-border-color);
+						@include ab(0, n, 0, 0);
+					}	
+				}				
+			}
 		}
 	}
 }

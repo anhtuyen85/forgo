@@ -10,7 +10,8 @@
 		z-index: layer(card_section-content);
 	}	
 	.card_section-text-1 {
-		font-family: var(--ff-heading);
+		@include font-heading;
+		@include letter-spacing;
 	}
 	.section_content-body {
 		.d-grid {

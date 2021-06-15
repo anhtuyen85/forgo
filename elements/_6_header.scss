@@ -6,15 +6,9 @@
 .header-sticky {
   .header-content_top {
     @include fixed(0,0,n,0);
-    z-index: layer(header-sticky);
-    border-top: 1px solid var(--body-border-color);
+    z-index: layer(header-sticky);    
     border-bottom: 1px solid var(--body-border-color);
-    animation: animation-top-bottom .5s both;
-    >div {
-      >div:first-child {
-        display: none;
-      }
-    }
+    animation: animation-top-bottom .5s both;  
   }
 }
 .header-container {
@@ -24,6 +18,7 @@
     }
     .container {
       @media (max-width: 991px) {
+        padding: 0;
         justify-content: flex-end !important;
         .header-cart > a, > a, > .header-hamburger {
           width: 68px;
@@ -90,6 +85,15 @@
         width: 22px;
         height: 22px;
       }
+      @media (hover : hover) {
+        &:hover {
+          background: var(--main-color);                      
+          color: var(--text-miscellaneous);
+          svg {
+            color: var(--text-miscellaneous) !important;
+          }
+        }
+      }
     }     
   }
   .header-cart {
@@ -110,8 +114,7 @@
       >li {
         position: relative;        
         flex: 1;      
-        >a {
-          transition: unset;
+        >a {          
           color: inherit;          
           position: relative;
           padding: 0 15px;
@@ -139,16 +142,19 @@
           position: static;
         }
         &:hover {
+          > a {
+            background: var(--main-color);            
+          }
           >a, >.svg_element-ui path {
-            color: var(--main-color);
+            color: var(--text-miscellaneous);
           }
         }
       }
     }
   }
   .header-logo {  
-    flex: 0 0 100px;
-    max-width: 100px;      
+    flex: 0 0 120px;
+    max-width: 120px;      
     @media (min-width: 992px) {
       flex: 0 0 12.5%;
       max-width: 12.5%;        
@@ -156,6 +162,7 @@
     }
     @media (max-width: 991px) {
       margin-right: auto;
+      padding-left: 17px;
     }
     >a {
       display: flex;
@@ -163,6 +170,23 @@
       max-height: 50px;
       @media (min-width: 992px) {
         padding: clamp(0.75rem, 0.77vw, 0.875rem);
+        svg path {
+          stroke: none !important;
+          fill: currentColor;
+        }
+        @media (hover : hover) {
+          &:hover {
+            background: var(--main-color);                      
+            color: var(--text-miscellaneous);
+            svg {
+              color: var(--text-miscellaneous) !important;
+            }
+            svg path {
+              stroke: none !important;
+              fill: var(--text-miscellaneous) !important;
+            }
+          }                    
+        }
       }
     }
   }
