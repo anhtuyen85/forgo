@@ -124,8 +124,7 @@
           justify-content: center;
           text-align: center;
           width: 100%;       
-          font-size: calc(var(--body-font-size) - 2px);  
-          @include font-medium;
+          font-size: calc(var(--body-font-size) - 2px);            
         }
         &:not(.sign-up-save) {
           > a {
@@ -136,7 +135,7 @@
           border-right: 1px solid var(--body-border-color);
         }
         &.sign-up-save a {
-          font-size: calc(var(--body-font-size) - 5px);  
+          font-size: var(--body-13);  
         }
         &.mega-menu {
           position: static;
@@ -153,8 +152,8 @@
     }
   }
   .header-logo {  
-    flex: 0 0 120px;
-    max-width: 120px;      
+    flex: 0 0 137px;
+    max-width: 137px;      
     @media (min-width: 992px) {
       flex: 0 0 12.5%;
       max-width: 12.5%;        
@@ -163,6 +162,7 @@
     @media (max-width: 991px) {
       margin-right: auto;
       padding-left: 17px;
+      padding-right: 17px;
     }
     >a {
       display: flex;
@@ -424,7 +424,7 @@
       @include padding-start(15px);
       width: 100%;
       .result-price {
-        font-size: var(--body-14);
+        font-size: var(--body-13);
         margin-top: 5px;
         del {
           @include margin-start(8px);

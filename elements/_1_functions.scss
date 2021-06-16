@@ -82,14 +82,28 @@
 @mixin flex-start {
     justify-content: flex-start;
 }
-@mixin font-medium {
-  font-family: 'TTNormsPro-Medium', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@mixin font-normal {
+  font-family: 'TTNormsPro-Normal', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 @mixin letter-spacing {
   letter-spacing: -1px;
 }
 @mixin font-heading {
   font-family: var(--ff-heading);
+}
+@mixin text-custom {
+  @include font-normal;
+  font-size: var(--body-13);
+  text-transform: uppercase;
+}
+@mixin max-height-zero {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.15s ease-in-out; 
+}
+@mixin max-height-full {
+  transition: max-height 0.35s ease-in-out;
+  max-height: 100%;
 }
 %list-style-reset {
     list-style: none;

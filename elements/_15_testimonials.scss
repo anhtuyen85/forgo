@@ -38,8 +38,7 @@
 			font-size: 1.875rem;
 		}
 	}
-	.card_section-text-2 {
-		@include font-medium;
+	.card_section-text-2 {		
 		line-height: 1.125rem;
 		font-size: 0.813rem;
 		@media (min-width: 768px) {

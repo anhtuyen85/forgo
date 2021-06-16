@@ -1,11 +1,10 @@
 #shopify-section-footer-widget {
 	border-bottom: none;
 }
-.footer {
-	@include font-medium;	
+.footer {	
 	.card_footer-item {
 		padding: 1.938rem 1.5rem;
-		@media (min-width: 992px) {
+		@media (min-width:1200px) {
 			padding: 3.563rem 4rem 13.125rem;	
 		}		
 		&:not(:last-child) {
@@ -20,6 +19,7 @@
 	.card_footer-title {
 		margin: 0 0 1.25rem;
 		text-transform: uppercase;	
+		@include font-heading;
 		@include letter-spacing;			
 	}
 	.menu_list-wrapper {
@@ -40,12 +40,17 @@
 			margin-bottom: 30px;				
 			&:before {
 				content: '';
-				width: 0.688rem;
-				height: 0.688rem;
+				width: 0.313rem;
+				height: 0.313rem;
 				border-radius: 50%;
 				background: #FF5800;
 				float: left;
-				margin: 0.313rem 1.25rem 0 0;
+				margin: 0.313rem 0.625rem 0 0;
+				@media (min-width: 768px) {
+					width: 0.688rem;
+					height: 0.688rem;
+					margin: 0.313rem 1.25rem 0 0;
+				}
 			}
 		}
 		.btn {

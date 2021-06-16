@@ -73,20 +73,19 @@
 		}
 	}
 	.js-slider-dots {
-		@include ab(n,n,25px,n);
+		@include ab(n, n, 2.5rem, n);
 		display: flex;
 		justify-content: center;
 		width: 100%;
 		a {
-			width: 12px;
-			height: 12px;
-			margin: 0 7px;
-			opacity: 0.5;
-			background: var(--body-second-color);
+			width: 1.125rem;
+			height: 1.125rem;
+			margin: 0 0.625rem;			
+			border: 1px solid var(--body-border-color);
 			@extend %radius-circle;
 			position: relative;
 			&:hover, &.tns-nav-active {
-				opacity: 1;
+				background: var(--body-border-color);
 			}
 		}
 	}

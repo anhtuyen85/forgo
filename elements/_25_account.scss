@@ -137,7 +137,7 @@
 		a {
 			margin: 5px 0;
 			padding: 10px;
-			width: 170px;
+			width: 100%;
 			text-align: center;
 		}
 	}
@@ -196,30 +196,41 @@
 }
 #address_tables {
 	margin-bottom: 60px;
-	.customer_address {
-		margin-bottom: 50px;
+	position: relative;
+	&:after {
+		content: '';
+		border: 1px solid var(--body-border-color);
+		pointer-events: none;
+		@include ab(0, 0, 0, 0);
+	}
+	.row {
+		margin: 0;
+		> div {
+			padding: 0;
+		}
+	}
+	.address_table {
+		border-right: 1px solid var(--body-border-color);
+		border-bottom: 1px solid var(--body-border-color);
+	}
+	.customer_address {	
+		padding: 1.25rem;		
 		.address_title {
-			font-size: var(--heading-size-h4);
-			font-weight: 500;
-			color: var(--main-color);
-			padding: 0 4px;
+			font-size: var(--heading-size-h3);
+			margin: 0 0 15px;
 		}
 		.view_address {
 			margin-bottom: 20px;
+			table {
+				width: 100%;
+			}
 			tr {
-				margin: 5px 0;
-				display: block;
+				td {
+					padding: 5px 0;
+				}				
 			}
-		}
-		.address_actions {
-			.btn {
-				border-radius: 4px;
-			}
-		}
-	}
-	.address-label {
-		font-weight: 600;
-	}
+		}		
+	}	
 	.pagination-holder {
 		padding: 10px 0;
 	}
@@ -234,7 +245,9 @@
 		@extend %radius-reset;
 	}
 	.modal-header, .modal-header h2 {
-		font-size: 20px;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: -1px;
 		margin-bottom: 20px;
 	}
 	.customer_address_table {
@@ -243,6 +256,7 @@
 			padding: 5px 10px;
 		}
 		td {
+			padding: 5px 0;
 			label {
 				margin: 8px 0;
 			}
@@ -259,13 +273,7 @@
 		select {
 			padding: 0 10px;
 		}
-	}
-	.action_bottom {
-		button {
-			padding: 9px 20px 11px;
-			border-radius: 20px;
-		}
-	}	
+	}		
 }
 .order_date {
 	margin-bottom: 20px;
