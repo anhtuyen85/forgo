@@ -801,13 +801,9 @@ img {
   }
 }
 .product-card_name {
-  margin: 0 0 8px;
-  font-size: 1.063rem;  
+  margin: 0 0 8px;  
   @include font-heading;
-  @include letter-spacing;
-  @media (min-width: 768px) {
-    font-size: 1.875rem;
-  }
+  @include font-size-medium;
 }
 .product-card_footer {
   display: flex;
@@ -1776,6 +1772,7 @@ img {
   border-bottom: 1px solid var(--body-border-color);
 }
 #shopify-section-cart-template,
-#shopify-section-page-faq-template {
+#shopify-section-page-faq-template,
+#shopify-section-page-sustainability-template {
   border-bottom: none;
 }

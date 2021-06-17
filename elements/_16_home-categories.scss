@@ -31,16 +31,10 @@
 			padding: 4.5rem 4rem;
 		}		
 	}
-	.card_section-text-1 {
-		line-height: 2.5rem;
-		font-size: 1.875rem;
+	.card_section-text-1 {		
 		margin: 0 0 8px;		
 		@include font-heading;
-		@include letter-spacing;
-		@media (min-width: 992px) {
-			line-height: 4.188rem;
-			font-size: 3.125rem;
-		}
+		@include font-size-big;
 	}
 	.card_section-text-2 {
 		line-height: 17px;

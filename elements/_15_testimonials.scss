@@ -27,15 +27,11 @@
 		text-align: center;
 	}
 	.card_section-text-1 {
-		margin-bottom: 0.5;
-		line-height: 1.563rem;				
-		font-size: 1.063rem;
+		margin-bottom: 0.5;						
 		@include font-heading;
-		@include letter-spacing;
-		@media (min-width: 768px) {
-			line-height: 2.5rem;
-			margin-bottom: 1.063rem;
-			font-size: 1.875rem;
+		@include font-size-medium;
+		@media (min-width: 768px) {			
+			margin-bottom: 1.063rem;			
 		}
 	}
 	.card_section-text-2 {		

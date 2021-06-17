@@ -222,7 +222,9 @@
 			label {
 				margin: 0;
 				@include margin-start(10px);
-				font-size: var(--body-font-size);
+				@media (min-width: 768px) {
+					font-size: 0.938rem;
+				}
 			}
 			input[type="checkbox"] {
 				@include ab(0, 0, n, 0);
