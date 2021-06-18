@@ -91,6 +91,9 @@
 @mixin font-heading {
   font-family: var(--ff-heading);
 }
+@mixin font-body {
+  font-family: var(--ff-body);
+}
 @mixin text-custom {
   @include font-normal;
   font-size: var(--body-13);

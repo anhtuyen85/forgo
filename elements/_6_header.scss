@@ -70,11 +70,12 @@
     align-items: center;  
     flex: 0 0 66.666666%;
     max-width: 66.666666%;
-    > a, .header-cart {
+    position: relative;
+    > .header-account-icon, .header-cart {
       flex: 0 0 50%;
-      max-width: 50%;
+      max-width: 50%;      
     }
-    > a, .cart-icon {
+    > .header-account-icon > a, .cart-icon {
       min-height: 50px;
       display: flex;
       align-items: center;
@@ -95,6 +96,65 @@
         }
       }
     }     
+  }
+  .header-account-icon {    
+    .header-account_dropdown {
+      @include ab(100%, n, n, 0);
+      min-width: 100vw;      
+      z-index: 3;
+      background: var(--body-bg-color);
+      border-top: 1px solid var(--body-border-color);
+      border-left: 1px solid var(--body-border-color);
+      border-bottom: 1px solid var(--body-border-color);
+      @media (min-width: 480px) {
+        min-width: 480px;
+      }
+      .ha-heading {
+        font-size: var(--body-13);
+        text-transform: uppercase;
+        line-height: 17px;
+        padding: 1.063rem 1.875rem;
+        border-bottom: 1px solid var(--body-border-color);
+        @include font-normal;        
+      }
+      .ha-dropdown {
+        padding: 1.875rem 2.938rem;
+        @media (min-width: 768px) {
+          padding: 1.875rem;
+        }      
+        .form-control {
+          input {
+            padding: 0.625rem 1.438rem;
+          }
+          input, .btn {
+            height: clamp(1.875rem, 2.5vw, 2.75rem);
+            text-transform: uppercase;
+            font-size: var(--body-13);
+            width: 100%;
+            @include font-normal;
+            @media (min-width: 1920px) {
+              height: 44px;
+            }
+          }
+          &:not(:last-child) {
+            margin-bottom: 1.125rem;            
+          }         
+        }   
+        .text-note {
+          border-top: 1px solid var(--body-border-color);
+          margin-left: -2.938rem;
+          margin-right: -2.938rem;
+          padding: 1.875rem 2.938rem 0 2.938rem;   
+          font-size: var(--body-13);          
+          @include font-normal;     
+          @media (min-width: 768px) {
+            margin-left: -1.875rem;
+            margin-right: -1.875rem;
+            padding: 1.875rem 1.875rem 0 1.875rem;            
+          }
+        }       
+      }
+    }
   }
   .header-cart {
     position: relative;

@@ -1561,7 +1561,7 @@ img {
         font-size: calc(var(--body-font-size) - 2px);
       }
     }
-  }
+  }  
   .cart-total {
     padding: 0.938rem 2.063rem;
     margin-top: 20px;    
@@ -1620,6 +1620,7 @@ img {
   transition: 0.3s all ease-in-out;
   border-top: 1px solid var(--body-border-color);
   border-left: 1px solid var(--body-border-color);
+  border-bottom: 1px solid var(--body-border-color);
   .pending {
     .svg-loading {
       display: block;
@@ -1773,6 +1774,7 @@ img {
 }
 #shopify-section-cart-template,
 #shopify-section-page-faq-template,
-#shopify-section-page-sustainability-template {
+#shopify-section-page-sustainability-template,
+#product-template template-default {
   border-bottom: none;
 }
