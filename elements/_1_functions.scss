@@ -109,7 +109,7 @@
 }
 @mixin font-size-medium {
   font-size: clamp(1.063rem, 2vw, 1.875rem);
-  line-height: clamp(1.563rem, 2.2vw, 2.5rem);
+  line-height: clamp(1.563rem, 2.5vw, 2.5rem);
   letter-spacing: -1px;  
   @media (min-width: 1920px) {
     font-size: var(--heading-size-h2);    
@@ -117,7 +117,7 @@
 }
 @mixin font-size-small {
   font-size: clamp(0.75rem, 2vw, 1.875rem);	
-  line-height: clamp(1.125rem, 2.2vw, 2.5rem);
+  line-height: clamp(1.125rem, 2.5vw, 2.5rem);
   @media (min-width: 1920px) {
     font-size: var(--heading-size-h2);
   }
@@ -130,6 +130,15 @@
 @mixin max-height-full {
   transition: max-height 0.35s ease-in-out;
   max-height: 100%;
+}
+@mixin border-bottom {
+  border-bottom: 1px solid var(--body-border-color);
+}
+@mixin after-border {
+  content: '';
+  width: 1px;
+  background: var(--body-border-color);
+  @include ab(0, n, 0, 0);
 }
 %list-style-reset {
     list-style: none;
@@ -156,7 +165,7 @@
     opacity: 1;
 }
 %transition {
-    transition: all 0.2s ease-in-out 0s;
+  transition: 0.3s all ease-in-out;
 }
 %fw-custom-1 {
     font-weight: 500;

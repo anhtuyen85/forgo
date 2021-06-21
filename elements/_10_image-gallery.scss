@@ -17,7 +17,7 @@
 		.d-grid {
 			.card_section-item {
 				&:not(:last-child) {
-					border-bottom: 1px solid var(--body-border-color);
+					@include border-bottom;
 					@media (min-width: 768px) {
 						border-bottom: none;
 						position: relative;

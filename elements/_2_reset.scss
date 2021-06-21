@@ -20,6 +20,7 @@ body {
   &:not(.template-index) {
     .footer {
       border-top: 1px solid var(--body-border-color);
+      margin-top: -1px;
     }
   }
 }
@@ -183,11 +184,15 @@ textarea {
   width: 100%;
   height: 16.875rem;
   border: 1px solid var(--body-border-color);
+  border-radius: 10px;
 }
-.shopify-challenge__container .shopify-challenge__button {
-  color: var(--btn1-cl);
-  background: var(--btn1-bg-cl);
-  height: 50px;
+.shopify-challenge__container {
+  margin: 60px auto;
+  .shopify-challenge__button {
+    color: var(--btn1-cl);
+    background: var(--btn1-bg-cl);
+    height: 50px;
+  }
 }
 .overflow-hidden {
   overflow: hidden;
@@ -471,13 +476,13 @@ svg path, svg g, svg circle {
 
 img {
   max-width: 100%;
-
+  vertical-align: middle;
+  border-style: none;
   &.img-lazy {
     position: absolute;
     left: 0;
     top: 0;
   }
-
   &.lazyload:not([src]) {
     opacity: 0;
   }
@@ -659,39 +664,29 @@ img {
     }
   }
   .js-prev-button {
-    @include ab(50%,-10px,n,n);
+    @include ab(50%,0,n,n);
     svg {
       @include margin-start(-1px);
     }
   }
   .js-next-button {
-    @include ab(50%,n,n,-10px);
-  }
-  @media (min-width: 1300px) {
-    .js-prev-button {
-      left: -55px;
-    }
-    .js-next-button {
-      right: -55px;
-    }
-  }
+    @include ab(50%,n,n,0);
+  }  
 }
 .tns-nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30px 0 10px;
-  height: 15px;
+  margin: 30px 0 10px;  
   button {
-    width: 12px;
-    height: 12px;
-    margin: 0 7px;
-    opacity: 0.5;
-    background: var(--body-second-color);
-    @extend %radius-circle;
+    width: 1.125rem;
+    height: 1.125rem;
+    margin: 0 .625rem;
+    border: 1px solid var(--body-border-color);
     position: relative;
+    @extend %radius-circle;
     &:hover, &.tns-nav-active {
-      opacity: 1;
+      background: var(--body-border-color);
     }
   }
 }
@@ -1117,7 +1112,7 @@ img {
     font-size: var(--heading-size-h4);
     margin-bottom: 15px;
     padding-bottom: 12px;
-    border-bottom: 1px solid var(--body-border-color);
+    @include border-bottom;
   }
   .modal_content {
     label {
@@ -1364,7 +1359,7 @@ img {
 }
 .cart-item {
   display: flex;  
-  border-bottom: 1px solid var(--body-border-color);
+  @include border-bottom;
   .image {         
     border-right: 1px solid var(--body-border-color);
     flex: 0 0 188px;
@@ -1392,7 +1387,7 @@ img {
     align-items: center;
     justify-content: center;
     color: var(--color-second);
-    margin-right: 5px;
+    margin: 1.25rem 0.938rem;
     @extend %radius-4px;
     svg {
       width: 12px;
@@ -1425,6 +1420,14 @@ img {
         padding: 0;
         text-align: center;        
       }
+    }
+  }
+}
+.drawer {
+  &.drawer-cart .form_wrapper {
+    max-height: calc(100vh - 203px);
+    @media (min-width: 992px) {
+      max-height: calc(100vh - 210px);
     }
   }
 }
@@ -1603,42 +1606,50 @@ img {
   .cart-empty {
     display: block;
     padding: 1.875rem;    
-    border-bottom: 1px solid var(--body-border-color);
+    @include border-bottom;
   }
 }
 }
 .header-cart_dropdown {
   @include ab(100%, n, n, 0);
+  @extend %transition;
+  @extend %visibility-hidden;
   display: none;
   align-items: center;
   justify-content: center;
   z-index: layer(header-cart_dropdown);
-  background: none;
-  opacity: 0;
-  visibility: hidden;  
-  transform: translateY(10px);
-  transition: 0.3s all ease-in-out;
+  background: var(--body-bg-color);   
+  transform: translateY(10px);  
   border-top: 1px solid var(--body-border-color);
   border-left: 1px solid var(--body-border-color);
-  border-bottom: 1px solid var(--body-border-color);
+  @include border-bottom; 
+  padding-bottom: env(safe-area-inset-bottom);
   .pending {
     .svg-loading {
       display: block;
     }
   }
   .form_wrapper {
-    max-height: 262px;
+    max-height:  calc(100vh - 14.25rem);
     overflow-y: auto; 
+    @media (min-width: 768px) {
+      max-height:  calc(100vh - 19.375rem);
+    }
   }
   .header-cart_wrapper {
     position: relative;
     width: 480px;
-    background: var(--body-bg-color);   
+    height: calc(100vh - 3.063rem);
+    padding: 0 0 10rem;
+    background: var(--body-bg-color);       
+    @media (min-width: 768px) {
+      height: calc(100vh - 6.25rem);
+    }
   }
   .title {   
     padding: 0.938rem 2.063rem;   
     line-height: 1.4;
-    border-bottom: 1px solid var(--body-border-color);    
+    @include border-bottom;    
     @include text-custom;
   }
   .cart-list {
@@ -1659,15 +1670,30 @@ img {
     @include text-custom;        
   }
   .action {
+    @include ab(n, 0, 0, 0);
     .action_buttons {
       display: flex;
       justify-content: space-between;
-      padding-bottom: 10px;
+      padding: 1.844rem 3rem;
+      border-top: 1px solid var(--body-border-color);
+      @media (min-width: 768px) {
+        padding: 2.063rem;
+      }
       a {
-        width: 45%;
-        text-align: center;
-        padding: 8px 32px;
-        border-radius: 3px;
+        width: 100%;        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0.938rem;
+        height: clamp(1.875rem, 2.5vw, 2.75rem);
+        font-size: var(--body-13);
+        @include font-body;
+        @media (min-width: 768px) {
+          font-size: calc(var(--body-font-size) - 2px);
+        }
+        @media (min-width: 1920px) {
+          height: 44px;
+        }
       }
     }
   }
@@ -1770,11 +1796,12 @@ img {
 }
 /* end sidebar */
 .shopify-section {
-  border-bottom: 1px solid var(--body-border-color);
+  @include border-bottom;
 }
 #shopify-section-cart-template,
 #shopify-section-page-faq-template,
 #shopify-section-page-sustainability-template,
-#product-template template-default {
+#product-template,
+#shopify-section-page-blog-template {
   border-bottom: none;
 }

@@ -113,7 +113,7 @@
 		&.grid-md-2 {
 			> div {
 				&:not(:last-child) {
-					border-bottom: 1px solid var(--body-border-color);
+					@include border-bottom;
 					@media (min-width: 768px) {
 						border-bottom: none;
 						border-right: 1px solid var(--body-border-color);
@@ -167,7 +167,7 @@
 		.product_tab-controls > ul {
 			display: flex;
 			border-top: 1px solid var(--body-border-color);
-			border-bottom: 1px solid var(--body-border-color);
+			@include border-bottom;
 			overflow-x: auto;			
 			li {
 				flex: 1;
@@ -211,7 +211,7 @@
 		}
 		.faqs-item {
 			&:not(:last-child) {
-				border-bottom: 1px solid var(--body-border-color);
+				@include border-bottom;
 			}
 			.care-item-heading {
 				text-transform: uppercase;				
@@ -296,13 +296,16 @@
 
 /* other page */
 .page-content {
-	margin: 30px 0 60px;
-	>h3 {
-		font-size: 30px;
-		font-weight: 600;
+	padding-top: 3.125rem;
+	padding-bottom: 3.125rem;
+	@media (min-width: 768px) {
+		padding-top: 6.25rem;
+		padding-bottom: 6.25rem;
 	}
-	p {
-		line-height: 21px;
+	>h3 {
+		font-size: 30px;		
+	}
+	p {		
 		margin: 16px 0;
 	}
 }
@@ -311,26 +314,23 @@
 /* Sustainability */
 .section-sustainability {
 	.paragraph-image_content {
-		border-bottom: 1px solid var(--body-border-color);
+		@include border-bottom;
 		.d-grid {
 			&:not(.grid-md-2) {
 				> div {
 					&:not(:last-child) {
-						border-bottom: 1px solid var(--body-border-color);
+						@include border-bottom;
 					}
 				}
 			}	
 			&.grid-md-2 {
 				.image-wrapper {
-					border-bottom: 1px solid var(--body-border-color);
+					@include border-bottom;
 					position: relative;
 					@media (min-width: 768px) {
 						border-bottom: none;
 						&:after {
-							content: '';
-							width: 1px;
-							background: var(--body-border-color);
-							@include ab(0, n, 0, 0);
+							@include after-border;
 						}
 					}
 				}
@@ -394,7 +394,7 @@
 	}
 	.section-content__video {
 		.custom-content__video {
-			border-bottom: 1px solid var(--body-border-color);
+			@include border-bottom;
 			@media (min-width: 768px) {
 				border-right: 1px solid var(--body-border-color);
 				border-bottom: none;
@@ -445,6 +445,87 @@
 						}
 					}
 				}
+			}
+		}
+	}
+}
+/* Sustainability - Our Approach - Blog posts */
+.section-slideshow-blocks {
+	@include border-bottom;
+	.tns-outer {
+		position: relative;
+		.tns-nav {
+			@include ab(n, 0, 30px, 0);
+		}
+	}
+	.slider-item {
+		position: relative;
+		.image-desktop {
+			display: none;
+			@media (min-width: 768px) {
+				display: block;
+			}
+		}
+		.image-mobile {
+			@media (min-width: 768px) {
+				display: none;
+			}
+		}
+		.textbox {
+			@include ab(50%, 50%, n, n);
+			transform: translate(-50%, -50%);
+			text-align: center;
+			width: 100%;
+			max-width: 1200px;
+			padding: 0 15px;
+			.text-1 {
+				font-size: 1.875rem;
+				line-height: 2.5rem;
+				letter-spacing: -1px;
+				text-transform: uppercase;
+				@include font-heading;
+				@media (min-width: 768px) {
+					font-size: 3.125rem;
+					line-height: 4.188rem;
+				}
+			}
+			.text-2 {
+				margin: 0 auto 0.938rem;
+				font-size: 0.813rem;
+				@media (min-width: 768px) {
+					font-size: 1.875rem;
+					margin: 0 auto 1.875rem;				
+				}
+			}
+		}
+	}
+}
+.section-blog-blocks {	
+	.blog-blocks-content {
+		@include border-bottom;
+		> h3 {
+			padding: 2.188rem 1.625rem;
+			text-transform: uppercase;
+			@include border-bottom;
+			@include font-size-medium;
+			@media (min-width: 768px) {
+				padding: 3.969rem 4.531rem;
+			}
+		}
+		&.hide {
+			display: none;
+		}
+	}	
+	.load-more {
+		text-align: center;	
+		padding: 0 1.625rem;	
+		.btn {
+			height: clamp(1.875rem, 2.8vw, 3.375rem);
+			width: 100%;
+			max-width: 580px;
+			margin: 1.875rem auto;
+			@media (min-width: 768px) {
+				margin: 4.125rem auto;
 			}
 		}
 	}

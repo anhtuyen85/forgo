@@ -1,6 +1,18 @@
+.page-account,
+#address-container {
+	padding-top: 3.125rem;
+	padding-bottom: 3.125rem;
+	@media (min-width: 768px) {
+		padding-top: 6.25rem;
+		padding-bottom: 6.25rem;
+	}
+}
 #customer_orders {	
 	.page-heading {
 		margin-bottom: 30px;
+	}
+	p {
+		margin: 0 0 20px;
 	}
  	.orders-detail {
 		border: 1px solid var(--body-border-color);
@@ -16,7 +28,7 @@
 			min-width: 120px;
 			padding: 15px;
 			background: #eee;
-			border-bottom: 1px solid var(--body-border-color);
+			@include border-bottom;
 			&:not(:last-child) {
 				border-inline-end-width: 1px;
 				border-inline-end-style: solid;
@@ -31,7 +43,7 @@
 			max-width: 20%;
 			min-width: 120px;
 			padding: 20px 15px;
-			border-bottom: 1px solid var(--body-border-color);
+			@include border-bottom;
 			&:not(:last-child) {
 				border-inline-end-width: 1px;
 				border-inline-end-style: solid;
@@ -44,8 +56,11 @@
 	}
 }
 #address_tables {
-	margin-bottom: 60px;
+	margin: 30px 0;
 	position: relative;
+	@media (min-width: 768px) {
+		margin: 60px 0;
+	}
 	&:after {
 		content: '';
 		border: 1px solid var(--body-border-color);
@@ -60,7 +75,7 @@
 	}
 	.address_table {
 		border-right: 1px solid var(--body-border-color);
-		border-bottom: 1px solid var(--body-border-color);
+		@include border-bottom;
 	}
 	.customer_address {	
 		padding: 1.25rem;		
@@ -146,7 +161,7 @@
 	tr th {
 		padding: 15px;
 		font-weight: 600;
-		border-bottom: 1px solid var(--body-border-color);
+		@include border-bottom;
 		&:not(:last-child) {
 			border-inline-end-width: 1px;
 			border-inline-end-style: solid;
@@ -160,7 +175,7 @@
 	tbody {
 		td {
 			padding: 10px 15px;
-			border-bottom: 1px solid var(--body-border-color);
+			@include border-bottom;
 			&:not(:last-child) {
 				border-inline-end-width: 1px;
 				border-inline-end-style: solid;
@@ -185,7 +200,7 @@
 			padding: 10px 15px;
 		}
 		tr:not(:last-child) td {
-			border-bottom: 1px solid var(--body-border-color);
+			@include border-bottom;
 		}
 		tr td:not(:last-child) {
 			border-inline-end-width: 1px;
@@ -204,6 +219,17 @@
 					padding-inline-start: 20px;
 				}
 			}
+		}
+	}
+}
+#customer_sidebar {
+	.action-bottom {
+		.btn {
+			display: block;
+			text-align: center;
+			width: 100%;
+			margin-bottom: 10px;
+			max-width: 290px;
 		}
 	}
 }

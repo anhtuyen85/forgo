@@ -8,7 +8,7 @@
 			padding: 3.563rem 4rem 13.125rem;	
 		}		
 		&:not(:last-child) {
-			border-bottom: 1px solid var(--body-border-color);
+			@include border-bottom;
 			@media (min-width: 768px) {
 				border-bottom: none;
 				border-right: 1px solid var(--body-border-color);

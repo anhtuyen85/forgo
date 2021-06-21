@@ -38,12 +38,12 @@
 	}
 	.cart-content {
 		.line-item_wrapper {						
-			border-bottom: 1px solid var(--body-border-color);
+			@include border-bottom;
 		}
 		.line-item_price {
 			text-align: center;
 			padding: 15px 0;
-			border-bottom: 1px solid var(--body-border-color);
+			@include border-bottom;
 			.price-compare {
 				@include margin-end(10px);
 			}
@@ -127,7 +127,7 @@
 		.line-item_headline {
 			display: flex;
 			align-items: center;
-			border-bottom: 1px solid var(--body-border-color);
+			@include border-bottom;
 		}
 		.image {
 			width: 100%;
@@ -198,7 +198,7 @@
 			align-items: center;
 			padding-bottom: 5px;
 			margin-bottom: 22px;			
-			border-bottom: 1px solid var(--body-border-color);
+			@include border-bottom;
 			.title {
 				text-transform: uppercase;
 				font-size: var(--body-13);
@@ -262,6 +262,12 @@
 	}
 	.text-right {
 		margin-top: 25px;
+		button {
+			width: 100%;
+			max-width: 330px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 	}
 	.free-shipping {
 		margin-top: 15px;
@@ -351,7 +357,7 @@
 			align-items: center;
 			height: 55px;						
 			grid-template-columns: 1fr minmax(100px, 100px) minmax(100px, 100px) 50px;
-			border-bottom: 1px solid var(--body-border-color);
+			@include border-bottom;
 			.price_title {
 				display: none;
 			}
