@@ -1,12 +1,6 @@
 .blog-list-content {
 	> h4 {
-		padding: 2.188rem 1.625rem;
-		text-transform: uppercase;
-		@include border-bottom;
-		@include font-size-medium;
-		@media (min-width: 768px) {
-			padding: 3.969rem 4.531rem;
-		}
+		@include custom-block-heading;
 	}
 }
 .blog-list {

@@ -84,7 +84,19 @@ ol {
   padding: 0;
   list-style: decimal inside none;
 }
-
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 20px;
+  color: var(--main-color);
+  button {
+    order: 2;
+    font-size: 30px;
+    color: inherit;
+    @include font-normal;
+  }
+}
 small {
   font-size: 80%;
 }
@@ -785,18 +797,26 @@ img {
     }
   }
   .product-card_body {
-    padding: 0 1.125rem 0.625rem;
-    @media (min-width: 768px) {
-      @include ab(n, 0, 0, 0);
+    padding: 0 1.125rem 0.625rem; 
+    @include ab(n, 0, 0, 0);   
+    @media (min-width: 768px) {      
       padding: 0 1.875rem 2.5rem;
     }
     @media (min-width: 1400px) {
       padding: 0 3.75rem 4.375rem;
     }
+  } 
+  &.style-2 {
+    .product-card_body {
+      @media (max-width: 767px) {
+        position: static;
+        padding: 0.75rem 1.563rem 1.063rem;
+      }
+    }
   }
 }
-.product-card_name {
-  margin: 0 0 8px;  
+.product-card_name {  
+  margin: 0;
   @include font-heading;
   @include font-size-medium;
 }
@@ -804,19 +824,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;  
+  margin: 0 0 8px;  
   p {
     margin: 0;
-  }
-  .product-card_action {
-    .btn {
-      padding: 0;
-      svg {
-        fill: var(--body-second-color);
-        color: var(--body-second-color);
-        width: 24px;
-        height: 24px;
-      }
-    }
   }
 }
 .product-price {
@@ -1605,8 +1615,7 @@ img {
   }
   .cart-empty {
     display: block;
-    padding: 1.875rem;    
-    @include border-bottom;
+    padding: 1.875rem;        
   }
 }
 }
@@ -1620,10 +1629,12 @@ img {
   z-index: layer(header-cart_dropdown);
   background: var(--body-bg-color);   
   transform: translateY(10px);  
-  border-top: 1px solid var(--body-border-color);
-  border-left: 1px solid var(--body-border-color);
+  border-top: 1px solid var(--body-border-color);  
   @include border-bottom; 
   padding-bottom: env(safe-area-inset-bottom);
+  @media (min-width: 481px) {
+    border-left: 1px solid var(--body-border-color);
+  }
   .pending {
     .svg-loading {
       display: block;
@@ -1802,6 +1813,8 @@ img {
 #shopify-section-page-faq-template,
 #shopify-section-page-sustainability-template,
 #product-template,
-#shopify-section-page-blog-template {
+#shopify-section-page-blog-template,
+#shopify-section-product-template,
+#shopify-section-collection-template {
   border-bottom: none;
 }

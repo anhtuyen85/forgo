@@ -207,11 +207,12 @@
 	.menu-list {
 		>li.menu-item {			
 			> a {
-				padding-top: 15px;
-				padding-bottom: 15px;
+				padding-top: 16px;
+				padding-bottom: 16px;
 				flex: 1;
 				text-transform: uppercase;
-				font-size: calc(var(--body-font-size) - 2px);
+				line-height: 1.8;
+				font-size: var(--body-13);
 			}
 			&.h-auto {
 				height: auto;

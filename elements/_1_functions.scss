@@ -140,6 +140,15 @@
   background: var(--body-border-color);
   @include ab(0, n, 0, 0);
 }
+@mixin custom-block-heading {
+  padding: 2.188rem 1.625rem;
+  text-transform: uppercase;
+  @include border-bottom;
+  @include font-size-medium;
+  @media (min-width: 768px) {
+    padding: 3.969rem 4.531rem;
+  }
+}
 %list-style-reset {
     list-style: none;
 }

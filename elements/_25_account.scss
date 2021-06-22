@@ -1,3 +1,63 @@
+
+.account-form {
+	.form-wrapper {
+		max-width: 670px;
+		margin: 0 auto;
+		.heading {
+			text-align: center;
+			margin: 0 auto 1.875rem;
+			text-transform: uppercase;
+			@include font-size-medium;
+		}
+		.note {
+			margin: 0 0 20px;
+		}
+		.form-control {			
+			input, .btn {				
+				width: 100%;				
+				@include font-normal;
+				height: 40px;
+				@media (min-width: 768px) {
+					height: 56px;
+				}
+			}
+			.btn {				
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex: 0 0 100%;
+				max-width: 100%;
+				&:not(:last-child) {
+					margin-bottom: 15px;
+				}
+			}
+			&:not(:last-child) {
+				margin-bottom: 1.125rem;      
+				@media (min-width: 768px) {
+					margin-bottom: 1.875rem;
+				}
+			}    
+		}
+		.action {
+			margin-bottom: 1.125rem;      
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			a {
+				text-decoration: underline;
+				@media (hover : hover) {
+					&:hover {
+						text-decoration: none;
+						color: var(--main-color);
+					}
+				}
+			}
+			@media (min-width: 768px) {
+				margin-bottom: 1.875rem;
+			}
+		}
+	}
+}
 .page-account,
 #address-container {
 	padding-top: 3.125rem;

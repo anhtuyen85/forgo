@@ -54,6 +54,9 @@
 	padding: 1.625rem;
 	@media (min-width: 768px) {
 		padding: 4rem;
+		.textbox-item {
+			padding-left: 50%;
+		}
 	}
 	h3 {
 		@include font-size-medium;
