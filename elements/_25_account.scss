@@ -1,9 +1,10 @@
-
+.template-customers-reset_password,
 .account-form {
-	.form-wrapper {
+	.form-wrapper,
+	#template {
 		max-width: 670px;
 		margin: 0 auto;
-		.heading {
+		.heading, .title {
 			text-align: center;
 			margin: 0 auto 1.875rem;
 			text-transform: uppercase;
@@ -59,7 +60,8 @@
 	}
 }
 .page-account,
-#address-container {
+#address-container,
+.template-customers-reset_password #main-content {
 	padding-top: 3.125rem;
 	padding-bottom: 3.125rem;
 	@media (min-width: 768px) {
@@ -134,7 +136,7 @@
 		}
 	}
 	.address_table {
-		border-right: 1px solid var(--body-border-color);
+		@include border-right;
 		@include border-bottom;
 	}
 	.customer_address {	

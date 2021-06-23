@@ -2,6 +2,7 @@
 	border-bottom: none;
 }
 .footer {	
+	margin-top: auto;
 	.card_footer-item {
 		padding: 1.938rem 1.5rem;
 		@media (min-width:1200px) {
@@ -11,7 +12,7 @@
 			@include border-bottom;
 			@media (min-width: 768px) {
 				border-bottom: none;
-				border-right: 1px solid var(--body-border-color);
+				@include border-right;
 			}			
 		}
 	}

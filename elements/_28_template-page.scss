@@ -116,7 +116,7 @@
 					@include border-bottom;
 					@media (min-width: 768px) {
 						border-bottom: none;
-						border-right: 1px solid var(--body-border-color);
+						@include border-right;
 					}
 				}
 			}
@@ -166,7 +166,7 @@
 	.tab-panel {
 		.product_tab-controls > ul {
 			display: flex;
-			border-top: 1px solid var(--body-border-color);
+			@include border-top;
 			@include border-bottom;
 			overflow-x: auto;			
 			li {
@@ -185,7 +185,7 @@
 					font-size: var(--heading-size-h2);
 				}
 				&:not(:last-child) {
-					border-right: 1px solid var(--body-border-color);
+					@include border-right;
 				}
 				&.active {
 					background: var(--main-color);
@@ -208,88 +208,7 @@
 			&.active {
 				@include max-height-full;
 			}
-		}
-		.faqs-item {
-			&:not(:last-child) {
-				@include border-bottom;
-			}
-			.care-item-heading {
-				text-transform: uppercase;				
-				letter-spacing: -1px;
-				height: clamp(6rem, 6vw, 7.75rem);
-				font-size: clamp(22px, 2vw, 30px);
-				padding: 0.625rem 1.5rem;				
-				cursor: pointer;
-				display: flex;
-				align-items: center;
-				width: 100%;	
-				justify-content: space-between;
-				user-select: none;
-				@media (min-width: 768px) {
-					padding-left: 4rem;
-					padding-right: 4rem;					
-					letter-spacing: -1px;
-				}
-				@media (min-width: 1920px) {
-					font-size: var(--heading-size-h2);
-				}
-				.icon {					
-					border: 1px solid var(--body-border-color);
-					border-radius: 50%;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					margin-left: 15px;
-					width: 1.938rem;
-					height: 1.938rem;
-					flex: 0 0 1.938rem;
-					max-width: 1.938rem;
-				}
-				svg:nth-child(2) {
-					display: none;
-				}
-			}
-			&.active {
-				.care-item-heading svg {
-					&:nth-child(1) {
-						display: none;
-					}
-					&:nth-child(2) {
-						display: flex;
-					}
-				}				
-				.faqs-item-content {
-					@include max-height-full;
-					border-top: 1px solid var(--body-border-color);			
-					padding-top: 1.625rem;
-					padding-bottom: 1.625rem;		
-					@media (min-width: 768px) {
-						padding-top: 4.438rem;
-						padding-bottom: 6.25rem;		
-					}
-					p {
-						max-width: 1280px;											
-						margin: 0;			
-						@include font-size-small;
-						&:not(:last-child) {
-							margin-bottom: 20px;
-							@media (min-width: 768px) {
-								margin-bottom: 40px;
-							}
-						}
-					}	
-				}
-			}
-		}
-		.faqs-item-content {
-			@include max-height-zero;	
-			padding-left: 1.75rem;
-			padding-right: 1.75rem;	
-			@media (min-width: 768px) {
-				padding-left: 4rem;
-				padding-right: 4rem;	
-			}
-		}
+		}				
 	}
 }
 /*end page about us*/
@@ -336,7 +255,7 @@
 				}
 				.paragraph + .image-wrapper {
 					border: none;
-					border-top: 1px solid var(--body-border-color);
+					@include border-top;
 					@media (min-width: 768px) {
 						border-top: none;
 						&:after {
@@ -396,7 +315,7 @@
 		.custom-content__video {
 			@include border-bottom;
 			@media (min-width: 768px) {
-				border-right: 1px solid var(--body-border-color);
+				@include border-right;
 				border-bottom: none;
 			}
 		}
@@ -414,7 +333,7 @@
 				flex: 0 0 100%;
 				max-width: 100%;
 				padding: 1.625rem 1.625rem 2rem;
-				border-top: 1px solid var(--body-border-color);
+				@include border-top;
 				margin-top: -1px;				
 				@media (min-width: 1200px) {
 					padding: 2.438rem 2.688rem 4.375rem;					
@@ -423,7 +342,7 @@
 					flex: 0 0 50%;
 					max-width: 50%;
 					&:nth-child(2n + 1) {
-						border-right: 1px solid var(--body-border-color);
+						@include border-right;
 					}
 				}
 				h4 {										

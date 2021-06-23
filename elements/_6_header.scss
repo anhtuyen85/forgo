@@ -5,9 +5,10 @@
 }
 .header-sticky {
   .header-content_top {
-    @include fixed(0,0,n,0);
-    z-index: layer(header-sticky);    
+    @include fixed(0,0,n,0);    
+    @include border-top;
     @include border-bottom;
+    z-index: layer(header-sticky);    
     animation: animation-top-bottom .5s both;  
   }
   .header-cart_dropdown .header-cart_wrapper {
@@ -109,7 +110,7 @@
       @extend %visibility-hidden;
       min-width: 100vw;            
       background: var(--body-bg-color);
-      border-top: 1px solid var(--body-border-color);            
+      @include border-top;            
       @media (min-width: 481px) {
         min-width: 480px;
         border-left: 1px solid var(--body-border-color);      
@@ -159,7 +160,7 @@
           }         
         }   
         .text-note {
-          border-top: 1px solid var(--body-border-color);
+          @include border-top;
           margin-left: -2.938rem;
           margin-right: -2.938rem;
           margin-top: 1.719rem;
@@ -223,7 +224,7 @@
           }
         }
         &:not(:last-child) {
-          border-right: 1px solid var(--body-border-color);
+          @include border-right;
         }
         &.sign-up-save a {
           font-size: var(--body-13);  
@@ -250,7 +251,7 @@
     @media (min-width: 992px) {
       flex: 0 0 12.5%;
       max-width: 12.5%;        
-      border-right: 1px solid var(--body-border-color);      
+      @include border-right;      
     }
     @media (max-width: 991px) {
       margin-right: auto;

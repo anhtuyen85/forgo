@@ -54,7 +54,7 @@
 		.line-item_total {
 			padding: 15px 0;
 			text-align: center;
-			border-top: 1px solid var(--body-border-color);						
+			@include border-top;						
 		}
 		.line-item_quantity {
 			display: flex;

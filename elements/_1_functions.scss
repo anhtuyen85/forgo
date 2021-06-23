@@ -131,8 +131,14 @@
   transition: max-height 0.35s ease-in-out;
   max-height: 100%;
 }
+@mixin border-top {
+  border-top: 1px solid var(--body-border-color);
+}
 @mixin border-bottom {
   border-bottom: 1px solid var(--body-border-color);
+}
+@mixin border-right {
+  border-right: 1px solid var(--body-border-color);
 }
 @mixin after-border {
   content: '';

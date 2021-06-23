@@ -12,17 +12,20 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing:antialiased;
-  overflow-x: hidden;
-  #main-content {
-    overflow: hidden;
-    min-height: 100vh;
-  }
+  overflow: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
   &:not(.template-index) {
     .footer {
-      border-top: 1px solid var(--body-border-color);
-      margin-top: -1px;
+      @include border-top;      
     }
   }
+}
+#main-content {
+  margin-bottom: -1px;
 }
 
 * {
@@ -369,7 +372,7 @@ svg path, svg g, svg circle {
   display: inline-block;
   padding: 1px 35px;
   line-height: 25px;  
-  font-size: calc(var(--body-font-size) - 6);
+  font-size: calc(var(--body-13) - 1px);
   text-transform: uppercase;
   border-radius: 999px;
   transition: all 0.35s ease-in-out 0s;
@@ -805,6 +808,19 @@ img {
     @media (min-width: 1400px) {
       padding: 0 3.75rem 4.375rem;
     }
+  }
+  .btn {
+    @media (min-width: 768px) and (max-width: 991px) {
+      font-size: calc(var(--body-13) - 1px);
+      padding: 1px 35px;
+      line-height: 25px; 
+    }
+    @media (max-width: 410px) {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+      text-align: center;
+    }
   } 
   &.style-2 {
     .product-card_body {
@@ -817,6 +833,7 @@ img {
 }
 .product-card_name {  
   margin: 0;
+  // text-transform: uppercase;
   @include font-heading;
   @include font-size-medium;
 }
@@ -1190,7 +1207,7 @@ img {
   }
   .modal_action {
     padding: 20px 0 10px;
-    border-top: 1px solid var(--body-border-color);
+    @include border-top;
     .modal_number {
       font-size: 15px;
       display: inline-block;
@@ -1371,7 +1388,7 @@ img {
   display: flex;  
   @include border-bottom;
   .image {         
-    border-right: 1px solid var(--body-border-color);
+    @include border-right;
     flex: 0 0 188px;
     max-width: 188px;
     @media (min-width: 374px) {
@@ -1564,7 +1581,7 @@ img {
     .buttons {
       display: block;
       padding: 2.063rem;
-      border-top: 1px solid var(--body-border-color);
+      @include border-top;
       .btn {
         display: flex;
         align-items: center;
@@ -1578,7 +1595,7 @@ img {
   .cart-total {
     padding: 0.938rem 2.063rem;
     margin-top: 20px;    
-    border-top: 1px solid var(--body-border-color);
+    @include border-top;
     display: flex;    
     justify-content: space-between;
     @include text-custom; 
@@ -1629,7 +1646,7 @@ img {
   z-index: layer(header-cart_dropdown);
   background: var(--body-bg-color);   
   transform: translateY(10px);  
-  border-top: 1px solid var(--body-border-color);  
+  @include border-top;  
   @include border-bottom; 
   padding-bottom: env(safe-area-inset-bottom);
   @media (min-width: 481px) {
@@ -1675,7 +1692,7 @@ img {
   .subtotal {
     padding: 0.938rem 2.063rem;
     margin-top: 20px;    
-    border-top: 1px solid var(--body-border-color);
+    @include border-top;
     display: flex;
     justify-content: space-between;    
     @include text-custom;        
@@ -1686,7 +1703,7 @@ img {
       display: flex;
       justify-content: space-between;
       padding: 1.844rem 3rem;
-      border-top: 1px solid var(--body-border-color);
+      @include border-top;
       @media (min-width: 768px) {
         padding: 2.063rem;
       }

@@ -1,7 +1,7 @@
 .home-categories {
 	.section_content-body {
 		position: relative;
-		border-top: 1px solid var(--body-border-color);
+		@include border-top;
 	}
 	.d-grid {
 		.card_section-item {
