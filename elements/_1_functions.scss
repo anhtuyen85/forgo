@@ -85,6 +85,9 @@
 @mixin font-normal {
   font-family: 'TTNormsPro-Normal', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+@mixin font-small {
+  font-size: calc(var(--body-font-size) - 3px);
+}
 @mixin letter-spacing {
   letter-spacing: -1px;
 }
@@ -100,26 +103,26 @@
   text-transform: uppercase;
 }
 @mixin font-size-big {
-  letter-spacing: -1px;  
-  font-size: clamp(1.875rem, 2.6vw, 3.125rem);		
-  line-height: clamp(2.5rem, 2.8vw, 4.188rem);
-  @media (min-width: 1920px) {
-    font-size: 3.125rem;    
+  letter-spacing: -1px;    
+  font-size: 1.375rem;
+  line-height: 1.3;
+  @media (min-width: 768px) {
+    font-size: 2.313rem;    
   }
 }
 @mixin font-size-medium {
   font-size: clamp(1.063rem, 2vw, 1.875rem);
   line-height: clamp(1.563rem, 2.5vw, 2.5rem);
   letter-spacing: -1px;  
-  @media (min-width: 1920px) {
+  @media (min-width: 768px) {
     font-size: var(--heading-size-h2);    
   }
 }
 @mixin font-size-small {
-  font-size: clamp(0.75rem, 2vw, 1.875rem);	
-  line-height: clamp(1.125rem, 2.5vw, 2.5rem);
-  @media (min-width: 1920px) {
-    font-size: var(--heading-size-h2);
+  font-size: 1.063rem;	
+  line-height: 1.4;
+  @media (min-width: 768px) {
+    font-size: 1.375rem;
   }
 }
 @mixin max-height-zero {
@@ -150,9 +153,9 @@
   padding: 2.188rem 1.625rem;
   text-transform: uppercase;
   @include border-bottom;
-  @include font-size-medium;
-  @media (min-width: 768px) {
-    padding: 3.969rem 4.531rem;
+  @include font-size-small;
+  @media (min-width: 992px) {
+    padding: 2.969rem 3.375rem;
   }
 }
 %list-style-reset {
@@ -169,12 +172,12 @@
     width: -moz-fit-content;
     width: fit-content;  
 }
-%visibility-hidden {
+@mixin visibility-hidden {
     visibility: hidden;
     z-index: -2;
     opacity: 0;
 }
-%visibility-visible {
+@mixin visibility-visible {
     visibility: visible;
     z-index: 99992;
     opacity: 1;

@@ -127,10 +127,10 @@
 	.pfc-block-wrapper {
 		padding: 1.706rem 1.875rem;
 		@media (min-width: 1200px) {
-			padding: 4.5rem 4rem;
+			padding: 4.063rem 3rem;
 		}
 		.pfc-block {		
-			@include font-size-medium;				
+			@include font-size-small;				
 			h2 {				
 				text-transform: uppercase;
 				margin-bottom: 18px;
@@ -174,19 +174,19 @@
 				white-space: nowrap;
 				text-transform: uppercase;				
 				letter-spacing: -1px;				
-				padding: 0.625rem 2.625rem;
+				padding: 0.625rem 1.875rem;
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				cursor: pointer;
-				height: clamp(6rem, 6vw, 7.75rem);
-				font-size: clamp(1.375rem, 2vw, 1.875rem);
-				@media (min-width: 1920px) {
-					font-size: var(--heading-size-h2);
+				height: 3.75rem;
+				@include font-size-small;
+				@media (min-width: 768px) {
+					height: 5.688rem;
 				}
 				&:not(:last-child) {
 					@include border-right;
-				}
+				}				
 				&.active {
 					background: var(--main-color);
 					color: var(--text-miscellaneous);
@@ -253,14 +253,22 @@
 						}
 					}
 				}
-				.paragraph + .image-wrapper {
-					border: none;
-					@include border-top;
-					@media (min-width: 768px) {
-						border-top: none;
-						&:after {
-							right: auto;
-							left: 0;
+				.paragraph {
+					+ .image-wrapper {
+						border: none;
+						@include border-top;
+						@media (min-width: 768px) {
+							border-top: none;
+							&:after {
+								right: auto;
+								left: 0;
+							}
+						}
+					}
+					+ .paragraph {
+						@include border-top;
+						@media (min-width: 768px) {
+							border-top: none;
 						}
 					}
 				}
@@ -321,9 +329,15 @@
 		}
 		.video-content {
 			position: relative;
+			padding-bottom: 106.25%;
+			height: 0;
+			overflow: hidden;		
 			iframe {
 				max-width: 100%;
-				display: block;
+				display: block;				
+				width: 100%;
+				height: 100%;
+				@include ab(0, 0, n, n);
 			}
 		}
 		.text-wrapper {

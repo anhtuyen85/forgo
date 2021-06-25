@@ -17,7 +17,7 @@
 			@extend %transition;
 			transform: translateY(5px);
 			&:not(.lazyloaded) {
-				min-height: 50px;
+				min-height: 38px;
 				display: flex;
 			}
 			ul {
@@ -171,7 +171,9 @@
 	.svg_element-ui {
 		display: flex;
 		align-items: center;
-		margin: 0 10px;
+		@media (min-width: 992px) {
+			margin: 0 10px;
+		}
 	}
 	.horizontal-nav {
 		>ul {

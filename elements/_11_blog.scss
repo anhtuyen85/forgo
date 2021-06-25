@@ -34,14 +34,21 @@
 		}
 		.info {
 			padding: 1.25rem 0 0;
-			@media (min-width: 768px) {
+			@media (min-width: 1200px) {
 				padding-top: 2.5rem;
 			}
 			h3 {
 				margin: 0 0 1.25rem;
-				@media (max-width: 767px) {
+				@media (max-width: 991px) {
 					font-size: 1.063rem;
 					margin-bottom: 0.625rem;
+				}
+			}
+			.btn {
+				@media (max-width: 991px) {
+					font-size: calc(var(--body-13) - 1px);
+					padding: 1px 35px;
+					line-height: 25px;
 				}
 			}
 		}

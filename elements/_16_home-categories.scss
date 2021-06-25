@@ -37,13 +37,12 @@
 		@include font-size-big;
 	}
 	.card_section-text-2 {
-		line-height: 17px;
-		font-size: 13px;
+		line-height: 1.6;
+		font-size: var(--body-13);
 		margin: 0 0 10px;
-		@media (min-width: 992px) {
-			line-height: 30px;
-			font-size: 18px;
-			margin-bottom: 30px;
+		@media (min-width: 992px) {			
+			font-size: var(--body-font-size);
+			margin-bottom: 11px;
 		}
 	}
 	.slider-wrapper {

@@ -98,7 +98,135 @@
 		line-height: 1.4;
 		padding: 1.188rem 1.625rem;
 	}
+	.faqs-item {
+		&.active {
+			.faqs-item-content {
+				padding: 0;
+			}
+		}
+	}
+	.faqs-item-content {
+		padding: 0;		
+	}
+	.paragraph-content {
+		&:not(:last-child) {
+			@include border-bottom;
+		}
+		.grid-md-2 {
+			.paragraph {
+				@include border-bottom;
+				margin-bottom: -1px;
+				position: relative;
+				padding: 2.55rem 4rem 5.625rem;
+				@media (min-width: 992px) {
+					padding: 5.688rem 4rem 18.125rem;
+				}
+				&:nth-child(2n + 1) {
+					&:after {
+						@include after-border;
+					}
+				}
+			}
+			.paragraph-style-2 {		
+				.paragraph {			
+					padding: 1.625rem 1.625rem 2rem;												
+					@media (min-width: 1200px) {
+						padding: 2.438rem 2.688rem 4.375rem;				
+					}
+								
+				}
+				.paragraph_item {
+					p {
+						margin: 0;
+						&:not(:last-child) {
+							margin-bottom: 20px;
+							@media (min-width: 768px) {
+								margin-bottom: 30px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.paragraph_title {										
+			text-transform: uppercase;					
+			margin-bottom: 20px;
+			@include font-size-medium;
+			@media (min-width: 768px) {
+				margin-bottom: 30px;
+			}					
+		}
+	}
+	.grid-md-1 {
+		> div {
+			&:not(:last-child) {
+				@include border-bottom;
+			}
+		}
+		> .paragraph {
+			padding: 1.875rem 1.563rem;
+			@media (min-width: 768px) {
+				padding: 4.375rem 4rem;
+			}
+		}
+	}
+	.grid-md-2 {
+		.image-item {			
+			&:not(:last-child) {
+				@include border-bottom;
+				@media (min-width: 768px) {
+					border: none;
+					&:after {
+						@include after-border;
+					}
+				}
+			}
+		}
+	}
+	.image-item {
+		position: relative;
+		.textbox {
+			@include ab(0, 0, n, n);
+			@include font-size-big;			
+			padding: 1.563rem;
+			@media (min-width: 992px) {
+				padding: 4rem;
+			}
+		}
+	}	
 }
 .product-tab-contents-inner {
-	@include border-top;	
+	@include border-top;		
+}
+#shopify-product-reviews {
+	margin: 0;
+	.spr-form {
+		.new-review-form {
+			fieldset {
+				> div {
+					display: flex;
+					flex-wrap: wrap;
+					label {
+						margin: 0;
+						padding: 0 15px 0 0;
+						flex: 0 0 30%;
+						max-width: 30%;
+						text-transform: uppercase;
+						font-size: var(--body-13);
+						color: var(--body-color);
+						@media (min-width: 768px) {
+							font-size: 1.875rem;
+						}
+						+ div {
+							flex: 1;
+						}
+					}
+					input, textarea {
+						width: 100%;
+						max-width: 730px;
+					}
+				}
+			}
+		}
+	}
 }

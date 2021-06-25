@@ -6,7 +6,7 @@
 	.card_footer-item {
 		padding: 1.938rem 1.5rem;
 		@media (min-width:1200px) {
-			padding: 3.563rem 4rem 13.125rem;	
+			padding: 2.625rem 2.813 10.188rem;	
 		}		
 		&:not(:last-child) {
 			@include border-bottom;
@@ -18,27 +18,29 @@
 	}
 	.card_footer-title,
 	.card_footer-title {
-		margin: 0 0 1.25rem;
+		margin: 0 0 0.938rem;
 		text-transform: uppercase;	
 		@include font-heading;
 		@include letter-spacing;			
 	}
 	.menu_list-wrapper {
+		@include font-small;
 		li {
 			a {
 				display: inline-block;
-				line-height: 30px;
+				line-height: 2;
 				text-transform: uppercase;
 			}
 			&:not(:last-child) {
-				margin-bottom: 0.625rem;
+				margin-bottom: 0.313rem;
 			}
 		}
 	}
 	.home-newsletter {
 		.main__text-2 {
-			text-transform: uppercase;
-			margin-bottom: 30px;				
+			@include font-small;
+			text-transform: uppercase;			
+			margin-bottom: 25px;				
 			&:before {
 				content: '';
 				width: 0.313rem;
@@ -48,17 +50,22 @@
 				float: left;
 				margin: 0.313rem 0.625rem 0 0;
 				@media (min-width: 768px) {
-					width: 0.688rem;
-					height: 0.688rem;
-					margin: 0.313rem 1.25rem 0 0;
+					width: 0.516rem;
+					height: 0.516rem;
+					margin: 0.313rem 0.625rem 0 0;
 				}
 			}
 		}
 		.btn {
 			width: 100%;
-			height: clamp(1.875rem, 3vw, 3.5rem);
+			// height: clamp(1.875rem, 3vw, 3.5rem);
 			display: block;
-			margin-top: clamp(1.5rem, 1.67vw, 2rem);
+			margin-top: 15px;
+			height: 1.855rem;
+			@media (min-width: 768px) {
+				margin-top: 20px;
+				height: 2.625rem;
+			}
 		}
 	}
 }

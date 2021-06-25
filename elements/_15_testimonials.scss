@@ -14,7 +14,7 @@
 		display: flex;
 		margin-bottom: 0.625rem;
 		@media (min-width: 768px) {
-			margin-bottom: 1.75rem;
+			margin-bottom: 1.25rem;
 		}
 		svg {
 			@media (max-width: 767px) {
@@ -29,17 +29,16 @@
 	.card_section-text-1 {
 		margin-bottom: 0.5;						
 		@include font-heading;
-		@include font-size-medium;
+		@include font-size-small;
 		@media (min-width: 768px) {			
-			margin-bottom: 1.063rem;			
+			margin-bottom: 0.813rem;			
 		}
 	}
 	.card_section-text-2 {		
-		line-height: 1.125rem;
+		line-height: 1.5;
 		font-size: 0.813rem;
-		@media (min-width: 768px) {
-			line-height: 1.625rem;
-			font-size: 1.125rem;
+		@media (min-width: 768px) {			
+			font-size: 1rem;
 		}
 	}
 }

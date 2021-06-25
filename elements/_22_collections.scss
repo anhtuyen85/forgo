@@ -20,9 +20,9 @@
             padding: 1.563rem 1.625rem 1.875rem;
             margin-bottom: 1.563rem;
             @media (min-width: 768px) {
-                padding: 2.688rem 4rem 4.438rem;
+                padding: 2rem 3rem 3.313rem;
             }
-            h2 {
+            h1 {
                 @include font-size-big;
                 text-transform: uppercase;
             }
@@ -33,7 +33,7 @@
                 align-items: center;
                 justify-content: center;
                 @media (min-width: 768px) {
-                    height: 3.375rem;
+                    height: 2.5rem;
                 }
             }
         }

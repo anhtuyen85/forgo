@@ -1,11 +1,11 @@
 .announcement-bar {	
 	.wrapper {
-		padding: 10px 0;
+		padding: 5px 0;
 		align-items: center;
 	}
 	.annoubar-column {
 		text-transform: uppercase;
-		font-size: calc(var(--body-font-size) - 2px);  
+		@include font-small;  
 		display: flex;
 		align-items: center;
 		line-height: 28px;

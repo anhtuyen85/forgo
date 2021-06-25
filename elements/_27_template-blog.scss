@@ -1,3 +1,10 @@
+.page-blog {
+	.page_wrapper {
+		> h1 {
+			@include custom-block-heading;
+		}
+	}
+}
 .article-content_header_image {
 	position: relative;
 	@include border-bottom;
@@ -116,10 +123,14 @@
 		}
 	}
 	.btn {
-		height: clamp(1.875rem, 2.8vw, 3.375rem);
+		// height: clamp(1.875rem, 2.8vw, 3.375rem);
 		width: 100%;
 		max-width: 320px;
 		margin: 0 auto;		
+		height: 1.855rem;
+		@media (min-width: 768px) {
+			height: 3.5rem;
+		}
 	}
 }
 .form-headline {
