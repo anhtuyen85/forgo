@@ -17,9 +17,9 @@
 			input, .btn {				
 				width: 100%;				
 				@include font-normal;
-				height: 40px;
+				height: 30px;
 				@media (min-width: 768px) {
-					height: 56px;
+					height: 42px;
 				}
 			}
 			.btn {				
@@ -178,7 +178,7 @@
 	}
 	.customer_address_table {
 		input {
-			height: 40px;
+			height: 42px;
 			padding: 5px 10px;
 		}
 		td {

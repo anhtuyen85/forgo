@@ -6,7 +6,7 @@
 	.card_footer-item {
 		padding: 1.938rem 1.5rem;
 		@media (min-width:1200px) {
-			padding: 2.625rem 2.813 10.188rem;	
+			padding: 2.625rem 2.813rem 10.188rem;	
 		}		
 		&:not(:last-child) {
 			@include border-bottom;

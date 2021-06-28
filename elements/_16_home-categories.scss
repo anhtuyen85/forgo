@@ -45,6 +45,10 @@
 			margin-bottom: 11px;
 		}
 	}
+	.btn {
+		padding: 2px 35px;
+		font-size: var(--body-13);
+	}
 	.slider-wrapper {
 		.slider-item {
 			&:not(:last-child) {

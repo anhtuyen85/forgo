@@ -11,7 +11,13 @@
 	}	
 	.card_section-text-1 {
 		@include font-heading;
-		@include letter-spacing;
+		@include font-size-big;
+	}
+	.card_section-button {
+		.btn {
+			padding: 2px 35px;
+			font-size: var(--body-13);
+		}
 	}
 	.section_content-body {
 		.d-grid {

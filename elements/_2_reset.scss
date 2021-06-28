@@ -178,7 +178,7 @@ select {
   // line-height: clamp(1.875rem, 3vw, 3.5rem);
   line-height: 1.855rem;
   @media (min-width: 768px) {
-    line-height: 2.625rem;
+    line-height: 2.5rem;
   }
 }
 
@@ -200,7 +200,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, input:-mo
 input {  
   height: 1.855rem;
   @media (min-width: 768px) {
-    height: 2.625rem;
+    height: 2.5rem;
   }
 }
 
@@ -379,6 +379,7 @@ svg path, svg g, svg circle {
 .btn {
   cursor: pointer;
   display: inline-block;
+  text-align: center;
   padding: 1px 35px;
   line-height: 25px;  
   font-size: calc(var(--body-13) - 1px);
@@ -1659,20 +1660,21 @@ img {
     }
   }
   .form_wrapper {
-    max-height:  calc(100vh - 14.813rem);
+    max-height:  calc(100vh - 14.313rem);
     overflow-y: auto; 
     @media (min-width: 768px) {
-      max-height:  calc(100vh - 19.375rem);
+      max-height:  calc(100vh - 19rem);
     }
   }
   .header-cart_wrapper {
     position: relative;
     width: 100%;
-    height: calc(100vh - 3.063rem);
-    padding: 0 0 11.25rem;
+    height: calc(100vh - 2.5rem);
+    padding: 0 0 9.375rem;
     background: var(--body-bg-color);       
     @media (min-width: 768px) {
-      height: calc(100vh - 6.25rem);
+      height: calc(100vh - 5rem);
+      padding-bottom: 11.563rem;
     }    
   }
   .title {   
@@ -1691,8 +1693,7 @@ img {
     }
   }
   .subtotal {
-    padding: 0.625rem 1.5rem;
-    margin-top: 20px;   
+    padding: 0.625rem 1.5rem;    
     line-height: 20px; 
     @include border-top;
     display: flex;
@@ -1704,7 +1705,7 @@ img {
     .action_buttons {
       display: flex;
       justify-content: space-between;
-      padding: 1.844rem 3rem;
+      padding: 1.5rem 1.563rem 3.125rem;
       @include border-top;
       @media (min-width: 768px) {
         padding: 1.5rem 1.5rem 5.313rem;

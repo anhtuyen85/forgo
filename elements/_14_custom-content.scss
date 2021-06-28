@@ -27,6 +27,7 @@
 	}
 	.card_section-figure {
 		display: flex;
+		@include font-normal;
 		> span {
 			padding-right: 20px;
 		}
