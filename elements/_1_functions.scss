@@ -125,6 +125,10 @@
     font-size: 1.375rem;
   }
 }
+@mixin custom-btn {
+  padding: 2px 35px;
+	@include font-small;
+}
 @mixin max-height-zero {
   max-height: 0;
   overflow: hidden;

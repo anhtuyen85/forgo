@@ -28,7 +28,7 @@
 	 	z-index: 2;	 	
 		padding: 1.625rem;
 		@media (min-width: 1200px) {			
-			padding: 4.5rem 4rem;
+			padding: 3.375rem 3rem;
 		}		
 	}
 	.card_section-text-1 {		
@@ -46,8 +46,7 @@
 		}
 	}
 	.btn {
-		padding: 2px 35px;
-		font-size: var(--body-13);
+		@include custom-btn;
 	}
 	.slider-wrapper {
 		.slider-item {

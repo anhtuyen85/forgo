@@ -30,21 +30,19 @@
 			}
 		}		
 		@media (min-width: 1200px) {
-			padding: 4rem 4rem 4.625rem;
+			padding: 2.813rem 2.813rem 2.375rem;
 		}
 		.info {
 			padding: 1.25rem 0 0;
 			@media (min-width: 1200px) {
-				padding-top: 2.5rem;
+				padding-top: 1.688rem;
 			}
 			h3 {
-				margin: 0 0 1.25rem;
-				@media (max-width: 991px) {
-					font-size: 1.063rem;
-					margin-bottom: 0.625rem;
-				}
+				margin: 0 0 0.938rem;
+				@include font-size-small;
 			}
 			.btn {
+				@include custom-btn;
 				@media (max-width: 991px) {
 					font-size: calc(var(--body-13) - 1px);
 					padding: 1px 35px;

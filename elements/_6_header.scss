@@ -65,10 +65,7 @@
     max-width: 12.5%;
     flex: 0 0 12.5%;    
     display: flex;
-    position: relative;
-    @media (min-width: 768px) {
-      @include border-right;
-    }
+    position: relative;   
   }
   .group-lc-wrapper {
     border-left: 1px solid var(--body-border-color);
@@ -100,14 +97,15 @@
       }
     }
     .group-lc_dropdown {
-      @include ab(100%, n, n, -1px);
+      @include ab(100%, n, n, 0);
       @extend %transition;
       @include visibility-hidden;      
       min-width: 100%;
       background: var(--body-bg-color);
       display: flex;
       border: 1px solid var(--body-border-color);
-      color: var(--body-color);
+      border-right: 0;
+      color: var(--body-color);    
       .lc_dropdown {
         text-transform: uppercase;
         @include font-small;
@@ -195,13 +193,14 @@
   }
   .header-account-icon {        
     .header-account_dropdown {
-      @include ab(100%, n, n, -1px);
+      @include ab(100%, n, n, 0);
       @extend %transition;
       @include visibility-hidden;
       min-width: 100vw;            
       background: var(--body-bg-color);
       border: 1px solid var(--body-border-color);
       border-bottom: none;
+      border-right: none;
       @media (min-width: 361px) {
         min-width: 360px;        
       }
@@ -414,8 +413,7 @@
     max-width: 137px;      
     @media (min-width: 992px) {
       flex: 0 0 12.5%;
-      max-width: 12.5%;        
-      border-left: 1px solid var(--body-border-color);
+      max-width: 12.5%;              
       @include border-right;      
     }
     @media (max-width: 991px) {
@@ -429,8 +427,11 @@
       align-items: center; 
       height: 100%; 
       max-height: 38px;
+      svg {
+        max-height: 100%;
+      }
       @media (min-width: 992px) {
-        padding: 11px;        
+        padding: 5px;        
         svg path {
           stroke: none !important;
           fill: currentColor;
