@@ -4,7 +4,7 @@
 	}
 }
 .blog-list {
-	overflow: hidden;	
+	overflow: hidden;		
 	&.grid-md-3 {		
 		article:nth-child(3n + 3) {			
 			.item {
@@ -38,8 +38,14 @@
 				padding-top: 1.688rem;
 			}
 			h3 {
-				margin: 0 0 0.938rem;
+				margin: 0 0 5px;				
 				@include font-size-small;
+			}
+			.meta-tag {
+				text-transform: uppercase;
+				margin: 0 0 15px;
+				@include font-normal;
+				@include font-small;
 			}
 			.btn {
 				@include custom-btn;

@@ -354,38 +354,37 @@
 
 /*manage z-index*/ 
 @function layer($name) {
-@if map-has-key($layer, $name) {
-@return map-get($layer, $name);
+  @if map-has-key($layer, $name) {
+  @return map-get($layer, $name);
 }
 @warn "The key #{$name} is not in the map ’$layer’";
-@return null;
+  @return null;
 };
-$layer: (
-    
-featured_product-overlay: 3,
-hover_style-2: 1,
-js-tns-controls: 2,
-card_section-content: 4,
-chosen-results: 5,
-countdown-block: 8,
-login-or: 6,
-sort-by: 7,
-header-label: 9,
-header-sticky: 15,
-back-to-top: 30,
-mobile-bar: 35,
-header-style-2: 69,
-sidebarDrawer: 72,
-sidebarDrawer-close: 76,
-drawer_overlay-search: 78,
-modal-cart-notify: 88,
-drawer-search: 89,
-search-results: 90,
-card_footer-mobile--menu: 25,
-header-cart_dropdown: 100,
-drawer_overlay: 111,
-lazy-drawer-cart: 205,
-header-mobile__vertical: 220,
-header-mobile__horizontal: 250,
+$layer: (    
+  featured_product-overlay: 3,
+  hover_style-2: 1,
+  js-tns-controls: 2,
+  card_section-content: 4,
+  chosen-results: 5,
+  countdown-block: 8,
+  login-or: 6,
+  sort-by: 7,
+  header-label: 9,
+  header-sticky: 15,
+  back-to-top: 30,
+  mobile-bar: 35,
+  header-style-2: 69,
+  sidebarDrawer: 72,
+  sidebarDrawer-close: 76,
+  drawer_overlay-search: 78,
+  modal-cart-notify: 88,
+  drawer-search: 89,
+  search-results: 90,
+  card_footer-mobile--menu: 25,
+  header-cart_dropdown: 100,
+  drawer_overlay: 111,
+  lazy-drawer-cart: 205,
+  header-mobile__vertical: 220,
+  header-mobile__horizontal: 250,
 );
 /*end manage z-index*/

@@ -37,6 +37,7 @@
     }
     .faqs-item-content {
         @include max-height-zero;	
+        @include font-normal;
         padding-left: 1.75rem;
         padding-right: 1.75rem;	
         @media (min-width: 768px) {

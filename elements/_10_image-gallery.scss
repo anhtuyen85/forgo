@@ -12,6 +12,7 @@
 	.card_section-text-1 {
 		@include font-heading;
 		@include font-size-big;
+		text-transform: uppercase;
 	}
 	.card_section-button {
 		.btn {

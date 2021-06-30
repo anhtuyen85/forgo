@@ -30,7 +30,8 @@
 				}		
 			}
 			.card_section-text-1 {		
-				margin: 0 0 8px;		
+				margin: 0 0 8px;	
+				text-transform: uppercase;	
 				@include font-heading;
 				@include font-size-big;
 			}

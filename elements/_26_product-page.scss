@@ -80,14 +80,43 @@
 						@include after-border;
 					}
 				}
+				&:not(:first-child) {
+					border-top: none;
+					@include border-right;
+				}
 			}
 		}
+	}	
+	.product-media {
+		position: relative;
 	}
-	.product-media_thumbnails {
-		@include border-top;
-		.media-item {
-			@include border-right;
+	.product-media_thumbnails {		
+		@media (min-width: 768px) {
+			@include border-top;		
 		}
+		@media (max-width: 767px) {
+			display: flex !important;
+			padding: 25px;
+			width: 100%;
+			z-index: 2;
+			@include ab(n, 0, 0, n);
+			.media-item {
+				width: 8px !important;
+				height: 8px;
+				border-radius: 50%;
+				border: 1px solid var(--body-border-color);
+				margin: 3px;
+				.image__style {
+					display: none !important;
+				}
+				&.tns-nav-active {
+					background: var(--body-border-color);
+				}
+			}
+		}
+		.media-item {
+			@include border-right;			
+		}				
 	}
 }
 .product-wrapper {		
@@ -118,6 +147,7 @@
 			
 	}
 	.product-des {
+		margin-bottom: 30px;
 		h2 {
 			text-transform: uppercase;		
 			font-weight: var(--body-font-weight);
@@ -145,12 +175,12 @@
 		justify-content: center;
 	}
 	.btn-next-step {
-		width: calc(100% - 2.25rem);
+		width: calc(100% - 3.25rem);
 		margin-left: 1.625rem;
 		margin-right: 1.625rem;
-		flex: 0 0 calc(100% - 6rem) !important;
-    	max-width: calc(100% - 6rem) !important;
-		@media (min-width: 768px) {
+		flex: 0 0 calc(100% - 3.25rem) !important;
+    	max-width: calc(100% - 3.25rem) !important;
+		@media (min-width: 992px) {
 			margin-left: 3rem;
 			margin-right: 3rem;
 			width: calc(100% - 6rem);
@@ -163,7 +193,7 @@
 	.form-group-btn {
 		padding-left: 1.625rem;
 		padding-right: 1.625rem;
-		@media (min-width: 768px) {
+		@media (min-width: 992px) {
 			padding-left: 3rem;
 			padding-right: 3rem;
 		}
@@ -181,7 +211,7 @@
 			font-size: 11px;
 			text-transform: uppercase;
 			text-decoration: underline;			
-			&:not(.pp-step) {
+			&:not(.active) {
 				display: none;
 			}
 			@media (hover : hover) {
@@ -280,6 +310,10 @@
 			}
 			&.btn-plus {
 				top: 0;
+				svg {
+					transform: rotate(180deg);
+					display: block;
+				}
 			}
 			&.btn-minus {
 				bottom: 0;
@@ -330,7 +364,7 @@
 	@include border-top;
 	padding: 1.625rem;	
 	margin: 1.438rem -1.635rem 0;
-	@media (min-width: 768px) {
+	@media (min-width: 992px) {
 		padding: 2.5rem 3rem;
 		margin-left: -3rem;
 		margin-right: -3rem;
