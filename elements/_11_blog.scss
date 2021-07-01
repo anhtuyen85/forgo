@@ -44,7 +44,7 @@
 			.meta-tag {
 				text-transform: uppercase;
 				margin: 0 0 15px;
-				@include font-normal;
+				font-weight: 400;
 				@include font-small;
 			}
 			.btn {

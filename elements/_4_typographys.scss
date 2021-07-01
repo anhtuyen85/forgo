@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @include font-heading;
+  @include fw-600;
 }
 
 b {
@@ -62,7 +62,7 @@ h6, .h6 {
   .section_title-text-1 {
     color: var(--section-heading-cl);
     font-weight: var(--section-heading-fw);    
-    @include font-heading;
+    @include fw-600;
     @include letter-spacing;
     svg {
       margin-right: var(--gutter-xs);

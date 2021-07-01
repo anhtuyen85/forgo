@@ -180,6 +180,7 @@
 				justify-content: center;
 				cursor: pointer;
 				height: 3.75rem;
+				@include fw-600;
 				@include font-size-small;
 				@media (min-width: 768px) {
 					height: 5.688rem;
@@ -254,6 +255,9 @@
 					}
 					+ .image-wrapper {
 						border-bottom: none;
+						&:after {
+							content: none;
+						}
 					}
 				}
 				.paragraph {
@@ -290,7 +294,7 @@
 			.text-1, .text-2 {				
 				text-transform: uppercase;	
 				margin: 7px auto;							
-				@include font-heading;			
+				@include fw-600;			
 				@include font-size-big;
 			}		
 		}
@@ -303,7 +307,7 @@
 		.paragraph_title {			
 			text-transform: uppercase;							
 			margin-bottom: 1.563rem;
-			@include font-heading;	
+			@include fw-600;
 			@include font-size-small;		
 			@media (min-width: 768px) {				
 				margin-bottom: 2.438rem;
@@ -374,11 +378,12 @@
 				h4 {										
 					text-transform: uppercase;					
 					margin-bottom: 18px;
+					@include fw-600;
 					@include font-size-small;					
 				}
 			}
 			.item-content {
-				@include font-normal;
+				font-weight: 400;
 				p {
 					margin: 0;
 					&:not(:last-child) {
@@ -424,7 +429,7 @@
 			.text-1 {								
 				text-transform: uppercase;
 				@include font-size-big;
-				@include font-heading;				
+				@include fw-600;				
 			}
 			.text-2 {
 				margin: 0 auto 0.688rem;	
@@ -506,7 +511,7 @@
 				.textbox {
 					margin-top: 11px;
 					font-size: 11px;
-					@include font-normal;
+					font-weight: 400;
 				}
 			}
 		}
@@ -518,7 +523,7 @@
 			.paragraph_title {			
 				text-transform: uppercase;							
 				margin-bottom: 1.563rem;
-				@include font-heading;	
+				@include fw-600;	
 				@include font-size-small;		
 				@media (min-width: 768px) {				
 					margin-bottom: 2.438rem;
@@ -526,7 +531,7 @@
 			}
 			.content {
 				@include font-size-small;
-				@include font-normal;
+				font-weight: 400;
 				p {
 					margin: 0;
 				}

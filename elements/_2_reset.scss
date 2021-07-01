@@ -99,7 +99,7 @@ ol {
     order: 2;
     font-size: 30px;
     color: inherit;
-    @include font-normal;
+    font-weight: 400;
   }
 }
 small {
@@ -212,6 +212,9 @@ input {
   @media (min-width: 768px) {
     height: 2.5rem;
   }
+}
+input[type="password"] {
+  text-transform: inherit !important;
 }
 input[type=number] {
   -moz-appearance: textfield;
@@ -398,7 +401,8 @@ svg path, svg g, svg circle {
   text-transform: uppercase;
   border-radius: 999px;
   transition: all 0.35s ease-in-out 0s;
-  @include font-heading;
+  font-family: var(--ff-body);
+  @include fw-600;
   @media (min-width: 768px) {
     padding: 7px 35px;
     line-height: 24px;    
@@ -853,7 +857,7 @@ img {
 .product-card_name {  
   margin: 0;
   text-transform: uppercase;
-  @include font-heading;
+  @include fw-600;
   @include font-size-small;
 }
 .product-card_footer {
@@ -871,14 +875,14 @@ img {
   flex-wrap: wrap;
   align-items: center;
   font-size: var(--body-13);
-  @include font-heading;  
+  @include fw-600;  
   > span:not(:last-child) {
     @include padding-end(7px);
   }
 }
 .price-sale {
   color: var(--price-sale-color);
-  font-weight: 600;
+  @include fw-600;
   font-size: 16px; 
 }
 .price-compare {
@@ -1451,7 +1455,7 @@ img {
     .money {
       text-transform: uppercase;
       font-size: var(--body-13);
-      @include font-normal;
+      font-weight: 400;
     }
     .qty {      
       text-transform: uppercase;
@@ -1573,7 +1577,7 @@ img {
     .money {
       text-transform: uppercase;
       font-size: var(--body-13);
-      @include font-normal;
+      font-weight: 400;
     }
     .qty {
       color: var(--color-second);
@@ -1815,26 +1819,23 @@ img {
   }
 }
 /*end 404*/
-
-/* sidebar */
-@media (min-width: 992px) { 
-  div #sidebarDrawer {
-    position: unset;
-    width: 100%;
-    height: auto;
-    transition: none;
-    margin-bottom: 30px;
-    .section_content-wrapper {
-      padding: 0;
-    } 
-    .section_content-body {
-      overflow: hidden;
-      max-height: 100%;
-      padding: 0;
+.home-products-grid {
+  .section_content-body {
+    .d-grid {
+      .product-card {
+        &:not(:last-child) {
+          @include border-bottom;
+          @media (min-width: 768px) {
+            border-bottom: none;
+            &:after {
+              @include after-border;
+            }
+          }
+        }        
+      }
     }
   }
 }
-/* end sidebar */
 .shopify-section {
   @include border-bottom;
 }

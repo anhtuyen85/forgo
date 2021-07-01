@@ -50,7 +50,7 @@
 	}
 	h1 {
 		font-size: var(--heading-size-h2);
-		font-weight: 600;
+		@include fw-600;
 		line-height: 36px;
 	}
 	.collection-title {
@@ -105,7 +105,7 @@
 			}
 			&.active {
 				a {
-					font-weight: 600;
+					@include fw-600;
 				}
 			}
 		}

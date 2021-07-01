@@ -20,7 +20,7 @@
 	.card_footer-title {
 		margin: 0 0 0.938rem;
 		text-transform: uppercase;	
-		@include font-heading;
+		@include fw-600;
 		@include letter-spacing;			
 	}
 	.menu_list-wrapper {
@@ -61,7 +61,7 @@
 			// height: clamp(1.875rem, 3vw, 3.5rem);
 			display: block;
 			margin-top: 15px;
-			height: 1.855rem;
+			height: 1.855rem;			
 			@media (min-width: 768px) {
 				margin-top: 20px;
 				height: 2.625rem;

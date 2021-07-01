@@ -16,7 +16,7 @@
 		.form-control {			
 			input, .btn {				
 				width: 100%;				
-				@include font-normal;
+				font-weight: 400;
 				height: 30px;
 				@media (min-width: 768px) {
 					height: 42px;
@@ -184,7 +184,7 @@
 		td {
 			padding: 5px 0;
 			label {
-				margin: 8px 0;
+				margin: 8px 20px 8px 0;
 			}
 			input[type="checkbox"] {
 				height: auto;
@@ -222,7 +222,7 @@
 	border: 1px solid var(--body-border-color);
 	tr th {
 		padding: 15px;
-		font-weight: 600;
+		@include fw-600;
 		@include border-bottom;
 		&:not(:last-child) {
 			border-inline-end-width: 1px;
@@ -271,7 +271,7 @@
 		}
 	}
 	.total {
-		font-weight: 600;
+		@include fw-600;
 	}
 	@media (min-width: 768px) {
 		display: inline-table;
@@ -292,6 +292,13 @@
 			width: 100%;
 			margin-bottom: 10px;
 			max-width: 290px;
+			@include custom-btn;
 		}
+	}
+}
+.action_top,
+.address_actions {
+	.btn {
+		@include custom-btn;
 	}
 }

@@ -32,7 +32,7 @@
 			.card_section-text-1 {		
 				margin: 0 0 8px;	
 				text-transform: uppercase;	
-				@include font-heading;
+				@include fw-600;
 				@include font-size-big;
 			}
 			.card_section-text-2 {
@@ -76,7 +76,7 @@
 	.published_at {
 		text-transform: uppercase;
 		@include font-small;
-		@include font-heading;		
+		@include fw-600;		
 	}
 }
 .blog-list-content {
@@ -124,7 +124,7 @@
 	}
 	p {
 		@include font-size-small;
-		@include font-normal;
+		font-weight: 400;
 		margin: 0;
 		&:not(:last-child) {
 			margin-bottom: 1.25rem;

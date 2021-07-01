@@ -109,14 +109,17 @@
   --footer-bg: #0C3E34;
   --footer-text-cl: #f5f5f5;
   --bg-white: #ffffff;
-  --gutter-xlg: 40px;
-  --gutter-lg: 30px;
-  --gutter-md: 25px;
-  --gutter-sm: 20px;
+  --gutter-xlg: 2.5rem; //40px
+  --gutter-lg: 1.875rem; //30px
+  --gutter-md: 1.563rem; //25px
+  --gutter-sm: 1.25rem; //20px
   --gutter-xs: 15px;
   --gutter-xxs: 10px;
 
   --body-13: 13px;
+  --gutter-big: 3.375rem; //54px
+  --gutter-medium: 3rem; //48px
+
 }
 
 /*end_remove_production*/ 

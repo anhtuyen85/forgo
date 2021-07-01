@@ -28,7 +28,7 @@
 	}
 	.card_section-text-1 {
 		margin-bottom: 0.5;						
-		@include font-heading;
+		@include fw-600;
 		@include font-size-small;
 		@media (min-width: 768px) {			
 			margin-bottom: 0.813rem;			

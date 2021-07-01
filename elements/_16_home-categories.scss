@@ -33,7 +33,7 @@
 	}
 	.card_section-text-1 {		
 		margin: 0 0 8px;		
-		@include font-heading;
+		@include fw-600;
 		@include font-size-big;
 	}
 	.card_section-text-2 {

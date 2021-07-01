@@ -4,6 +4,7 @@
     }
     .care-item-heading {
         @include font-size-small;
+        @include fw-600;
         text-transform: uppercase;				    
         letter-spacing: -1px;    
         height: 3.75rem;        
@@ -37,7 +38,7 @@
     }
     .faqs-item-content {
         @include max-height-zero;	
-        @include font-normal;
+        font-weight: 400;
         padding-left: 1.75rem;
         padding-right: 1.75rem;	
         @media (min-width: 768px) {
