@@ -262,8 +262,11 @@ textarea {
 .svg-loading {
   display: none;
 }
+svg {
+  pointer-events: none;
+}
 svg path, svg g, svg circle {
-  transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;  
 }
 .pending, .lazyloading {
   .svg-cart, .svg-close {
