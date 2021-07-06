@@ -6,6 +6,14 @@
             position: relative;
             @media (min-width: 768px) {
                 border-bottom: none;
+                height: calc(100vh - 80px);
+                .image__style {
+                    padding-top: 0 !important;
+                    height: 100%;
+                    img {
+                        object-fit: cover;
+                    }
+                }
                 &:after {
                     @include after-border;
                 }

@@ -36,13 +36,10 @@
 		@include fw-600;
 		@include font-size-big;
 	}
-	.card_section-text-2 {
-		line-height: 1.6;
-		font-size: var(--body-13);
+	.card_section-text-2 {	
 		margin: 0 0 10px;
-		@media (min-width: 992px) {			
-			font-size: var(--body-font-size);
-			margin-bottom: 11px;
+		@media (min-width: 992px) {		
+			margin-bottom: 16px;
 		}
 	}
 	.btn {

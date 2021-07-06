@@ -337,7 +337,11 @@
 		position: relative;
 		padding-bottom: 106.25%;
 		height: 0;
-		overflow: hidden;		
+		overflow: hidden;	
+		@media (min-width: 768px) {
+			padding: 0;
+			height: 100%;
+		}
 		iframe {
 			max-width: 100%;
 			display: block;				
@@ -347,14 +351,10 @@
 		}
 	}
 	.paragraph_custom__text {	
-		padding: 0;	
-		.custom-content__text {
-			height: 100%;
-		}
+		padding: 0;		
 		.text-wrapper {
 			display: flex;
-			flex-wrap: wrap;
-			height: 100%;
+			flex-wrap: wrap;			
 			.item {
 				@include border-top;
 				position: relative;
@@ -367,8 +367,7 @@
 				}
 				@media (min-width: 1200px) {
 					flex: 0 0 50%;
-					max-width: 50%;
-					min-height: 50%;	
+					max-width: 50%;					
 					&:nth-child(2n + 1) {
 						&:after {
 							@include after-border;							

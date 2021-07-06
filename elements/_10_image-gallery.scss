@@ -14,6 +14,9 @@
 		@include font-size-big;
 		text-transform: uppercase;
 	}
+	.card_section-text-2 {
+		margin-bottom: 16px;
+	}
 	.card_section-button {
 		.btn {
 			@include custom-btn;
@@ -35,7 +38,7 @@
 						}	
 					}
 				}
-			}
+			}		
 		}
 	}
 }
