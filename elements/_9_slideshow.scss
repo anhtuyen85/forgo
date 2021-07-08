@@ -1,75 +1,91 @@
-.home-slideshow {
-	.section-content {
+.home-slideshow {	
+	.slider-wrapper {
 		position: relative;
+	}
+	.slider-item {
+		position: relative;
+	}
+	.slide-banner {
+		@include border-bottom;
+		position: relative;
+		@media (min-width: 768px) {
+			border-bottom: 0;
+			&:after {
+				@include after-border;
+			}
+		}
+	}
+	.slide-content-wrapper {
 		.slide-content-inner {
-			padding: 0 var(--gutter-xs);
-			width: 100%;
+			padding: 24px 25px 80px;
+			@media (min-width: 768px) {
+				padding: 54px 48px 100px;
+			}			
+		}
+		.content-text-1 {
+			@include font-size-big;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+			@media (min-width: 768px) and (max-width: 991px) {
+				font-size: 22px;
+			}
+			@media (min-width: 768px) {
+				margin-bottom: 40px;
+			}
+		}
+		.content-text-2,
+		.content-text-3 {
+			@include font-size-small;
+			margin-bottom: 20px;
+			@media (min-width: 768px) and (max-width: 991px) {
+				font-size: 17px;
+			}
+			@media (min-width: 768px) {
+				margin-bottom: 30px;
+			}
 		}
 	}
 	.slide-content-inner >div {
 		animation-fill-mode: backwards;
 		animation-iteration-count: 1;
-	}
-	.section-content-wrapper {
-		.overlay-ui:not(img) {
-			display: table;
-			width: fit-content;
-		}
-	}
-	.slideshow-wrapper {
-		.col-12 {
-			padding: 0;
-		}
-		.slide-item {
-			position: relative;
-		}
-		.content-product_label {
-			.label_ui {
-				display: inline-block;
-			}
-		}
-		.content-text-3 {
-			letter-spacing: 0.5px;
-		}
-		.content-product .product-price {
-			margin: 0;
-		}
-		.slide-content-wrapper {
-			@include ab(0,0,0,0);
-			max-width: 1200px;
-			margin: 0 auto;
-			width: 100%;
-			padding: 0 var(--gutter-xs);
-		}
-		.content-sale-label {
-			width: 66px;
-			height: 66px;
-			line-height: 1.2;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;        
-			font-weight: 700;
-			font-size: 4.5rem;
-			background-color: var(--btn1-bg-cl);
-			color: var(--btn1-cl);
-			@extend %radius-circle;
-			&.overlay-ui {                        
-				@include translate(-54%, -20%);
-				@include ab(20%, 54%, n, n);
-			}
-			.sale-label {
-				display: flex;
-				margin-bottom: 3px;
-			}
-		}  
-	}
+	}		
 	.js-slider-controls {
-		.js-prev-button {
-			@include ab(n,3%,n,n);
+		@include ab(n, 0, 0, n);
+		padding: 25px;
+		z-index: 9;
+		display: flex;		
+		@media (min-width: 768px) {
+			padding: 54px 48px 50px;
+			left: 50%;			
 		}
-		.js-next-button {
-			@include ab(n,n,n,3%);
+		> a {
+			@include custom-btn;
+			text-transform: uppercase;
+			border-radius: 999px;			
+			display: flex;
+			height: 30px;
+			align-items: center;
+			width: auto;			
+			margin: 0;
+			position: static;
+			opacity: 1;
+			font-weight: var(--btn1-fw);
+			color: var(--btn1-cl);
+			background: var(--btn1-bg-cl);
+			border: calc(var(--btn1-border-width) * 1px) solid var(--btn1-border-cl); 
+			svg {
+				display: none;
+			}
+			&:not(:last-child) {
+				margin-right: 12px;
+			}
+			&:hover {
+				@media (hover:hover) {      
+				  color: var(--btn1-hover-cl);
+				  background: var(--btn1-hover-bg-cl);
+				  border-color: var(--btn1-hover-border-cl);
+				}
+			  }
 		}
 	}
 	.js-slider-dots {

@@ -45,19 +45,28 @@
 
 /* Section Icon List*/
 .home-icon-list {
-	.d-fix-item {
-		display: flex;
-		justify-content: center;
-		max-width: 1220px;
-		margin: 0 auto;
-		.card_section-item {
-			flex: 0 0 50%;
-			max-width: 50%;
-			@media (min-width: 768px) {
-				flex: 0 0 16.666666%;
-				max-width: 16.666666%;
+	.slider-container {
+		text-align: center;		
+		.js-slider-controls {
+			> a {
+				> span {
+					display: none;
+				}
 			}
 		}
+		.slider-wrapper {
+			margin: 0 auto;	
+			position: relative;					
+			@media (min-width: 768px) {
+				width: 80%;
+				padding: 0 5%;
+			}
+			@media (min-width: 1440px) {
+				width: 70%;
+			}
+		}
+	}
+	.card_section-item {		
 		.card_section-figure {
 			display: flex;
 			justify-content: center;
