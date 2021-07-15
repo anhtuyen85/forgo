@@ -134,18 +134,18 @@
   max-height: 100%;
 }
 @mixin border-top {
-  border-top: 1px solid var(--body-border-color);
+  border-top: 1px solid var(--body-color);
 }
 @mixin border-bottom {
-  border-bottom: 1px solid var(--body-border-color);
+  border-bottom: 1px solid var(--body-color);
 }
 @mixin border-right {
-  border-right: 1px solid var(--body-border-color);
+  border-right: 1px solid var(--body-color);
 }
 @mixin after-border {
   content: '';
   width: 1px;
-  background: var(--body-border-color);
+  background: var(--body-color);
   @include ab(0, n, 0, 0);
 }
 @mixin custom-block-heading {

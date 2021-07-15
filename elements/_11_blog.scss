@@ -48,11 +48,13 @@
 				@include font-small;
 			}
 			.btn {
-				@include custom-btn;
+				@include custom-btn;				
+				margin-top: 14px;
 				@media (max-width: 991px) {
 					font-size: calc(var(--body-13) - 1px);
 					padding: 1px 35px;
 					line-height: 25px;
+					margin-top: 5px;					
 				}
 			}
 		}

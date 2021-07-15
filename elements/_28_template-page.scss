@@ -179,6 +179,7 @@
 				align-items: center;
 				justify-content: center;
 				cursor: pointer;
+				position: relative;
 				height: 3.75rem;
 				@include fw-600;
 				@include font-size-small;
@@ -186,7 +187,9 @@
 					height: 5.688rem;
 				}
 				&:not(:last-child) {
-					@include border-right;
+					&:after {
+						@include after-border;
+					}
 				}				
 				&.active {
 					background: var(--main-color);
@@ -347,6 +350,8 @@
 			display: block;				
 			width: 100%;
 			height: 100%;
+			pointer-events: none;
+			border: none;
 			@include ab(0, 0, n, n);
 		}
 	}

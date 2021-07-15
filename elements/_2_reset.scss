@@ -417,11 +417,10 @@ svg path, svg g, svg circle {
   color: var(--btn1-cl);
   background: var(--btn1-bg-cl);
   border: calc(var(--btn1-border-width) * 1px) solid var(--btn1-border-cl);  
-  svg {
-    path {
-      stroke: var(--btn1-cl);
-      fill: var(--btn1-cl);
-    }
+  @media (max-width: 767px) {
+    color: var(--btn1-hover-cl);
+    background: var(--btn1-hover-bg-cl);
+    border-color: var(--btn1-hover-border-cl);
   }
   &:hover {
     @media (hover:hover) {      
@@ -687,19 +686,24 @@ img {
   display: none; 
   @media (min-width: 768px) {
     display: block;
+    height: 100%;
   }
   a {
     z-index: layer(js-tns-controls);
     width: 40px;
-    height: 40px;
-    display: flex;
-    margin-top: -20px;
+    height: 100%;
+    display: flex;    
     align-items: center;
     justify-content: center;
     top: 0%;    
     @extend %radius-circle;
     path {
-      fill: var(--body-color);
+      fill: var(--main-color);
+    }
+    svg {
+      text, tspan {
+        fill: var(--main-color);
+      }
     }
     &[aria-disabled="true"] {
       opacity: 0.7;
@@ -707,10 +711,10 @@ img {
     }
   }
   .js-prev-button {
-    @include ab(50%,0,n,n);   
+    @include ab(0%,0,n,n);   
   }
   .js-next-button {
-    @include ab(50%,n,n,0);
+    @include ab(0%,n,n,0);
   }  
 }
 .tns-nav {
@@ -858,6 +862,9 @@ img {
   text-transform: uppercase;
   @include fw-600;
   @include font-size-small;
+  @media (max-width: 767px) {
+    @include font-small;
+  }
 }
 .product-card_footer {
   display: flex;
@@ -1678,21 +1685,15 @@ img {
     }
   }
   .form_wrapper {
-    max-height:  calc(100vh - 14.313rem);
-    overflow-y: auto; 
-    @media (min-width: 768px) {
-      max-height:  calc(100vh - 19rem);
-    }
+    max-height:  calc(100vh - 211px);
+    overflow-y: auto;   
   }
   .header-cart_wrapper {
     position: relative;
     width: 100%;
-    height: calc(100vh - 2.5rem);
-    padding: 0 0 9.375rem;
-    background: var(--body-bg-color);       
-    @media (min-width: 992px) {      
-      padding-bottom: 11.563rem;
-    }    
+    height: calc(100vh - 40px);
+    padding: 0 0 133px;
+    background: var(--body-bg-color);            
   }
   .title {   
     padding: 0.625rem 1.5rem;   
@@ -1718,14 +1719,14 @@ img {
     @include text-custom;        
   }
   .action {
-    @include ab(n, 0, 0, 0);
+    @include fixed(n, 0, 0, 0);
     .action_buttons {
       display: flex;
       justify-content: space-between;
-      padding: 1.5rem 1.563rem 3.125rem;
+      padding: 1.5rem 1.563rem 33px;
       @include border-top;
       @media (min-width: 768px) {
-        padding: 1.5rem 1.5rem 5.313rem;
+        padding: 1.5rem 1.5rem 33px;
       }
       a {
         width: 100%;        

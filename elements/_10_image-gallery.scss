@@ -19,7 +19,8 @@
 	}
 	.card_section-button {
 		.btn {
-			@include custom-btn;
+			padding: 6px 35px;
+			@include font-small;
 		}
 	}
 	.section_content-body {
