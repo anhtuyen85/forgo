@@ -18,9 +18,8 @@
 		margin-bottom: 16px;
 	}
 	.card_section-button {
-		.btn {
-			padding: 6px 35px;
-			@include font-small;
+		.btn {			
+			@include custom-btn;
 		}
 	}
 	.section_content-body {
@@ -40,6 +39,16 @@
 					}
 				}
 			}		
+		}
+	}
+	.card_section-figure {
+		@media (max-width: 767px) {
+			.image__style {
+				padding-top: 460px !important;
+				img {
+					object-fit: cover;
+				}
+			}
 		}
 	}
 }

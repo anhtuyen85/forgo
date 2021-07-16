@@ -215,10 +215,25 @@
 				text-transform: uppercase;
 				line-height: 1.8;
 				font-size: var(--body-13);
+				&.sign-up-save {
+					text-transform: inherit;
+					color: var(--main-color) !important;
+
+				}
 			}
 			&.h-auto {
 				height: auto;
 			}
+			&.active,
+			&:focus,
+			&:focus-within  {
+				background: var(--main-color);
+				border-color: var(--main-color);
+				> a {
+					color: var(--text-miscellaneous) !important;
+				}
+			}				
+						
 		}
 	}
 	.mega-banner {

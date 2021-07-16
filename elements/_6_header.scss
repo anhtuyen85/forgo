@@ -398,7 +398,7 @@
             font-size: 11px;
           }    
         }
-        &:not(.sign-up-save) {
+        &:not(#sign-up-save) {
           > a {
             text-transform: uppercase;
           }
@@ -521,17 +521,22 @@
           background: #EDEDED;
           padding: 3px 20px;
           @include border-top;
+          position: relative;          
           label {
             font-size: 0.75rem;
             color: var(--main-color);
             margin: 0;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            pointer-events: none;
           }
           select {
             border: none;
             border-radius: 0;
-            padding: 0 1.563rem 0 0;
+            padding: 15px 1.563rem 0 0;
             text-transform: uppercase;
-            line-height: 1.875rem;
+            line-height: 33px;
             font-size: var(--body-13);
           }
           .select-group {
@@ -593,7 +598,7 @@
   .header-mobile__horizontal {    
     @extend %transition;
     @include visibility-hidden;    
-    @include fixed(50px,0,0,0);
+    @include fixed(47px,0,0,0);
     background: var(--body-bg-color);            
     padding-bottom: env(safe-area-inset-bottom);
     &.is-open {

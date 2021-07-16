@@ -1440,8 +1440,7 @@ img {
     align-items: center;
     justify-content: center;
     color: var(--color-second);
-    margin: 1.25rem 0.938rem;
-    display: none;;
+    margin: 1.25rem 0.938rem;    
     svg {
       width: 12px;
       height: 12px;
@@ -1450,9 +1449,9 @@ img {
   .info {    
     flex: 1;
     min-width: 0;
-    padding: 0.938rem;
+    padding: 0.938rem 0 0.938rem 0.938rem;
     @media (min-width: 480px) {
-      padding: 1.25rem;      
+      padding: 1.25rem 0 1.25rem 1.25rem;      
     }
     p {
       margin: 0;
@@ -1845,7 +1844,6 @@ img {
 #shopify-section-page-blog-template,
 #shopify-section-product-template,
 #shopify-section-collection-template,
-#shopify-section-product-recommendation,
 #shopify-section-article-template {
   border-bottom: none;
 }

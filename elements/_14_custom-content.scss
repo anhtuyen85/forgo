@@ -97,3 +97,17 @@
 		}
 	}
 }
+.list-number-true {
+	.block-text-content {
+		.card_section-item {
+			@extend %transition;
+		}
+		&.active {
+			.card_section-item {
+				&:not(.active) {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}

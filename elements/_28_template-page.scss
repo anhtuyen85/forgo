@@ -404,6 +404,31 @@
 /* Sustainability - Our Approach - Blog posts */
 .section-slideshow-blocks {
 	@include border-bottom;
+	position: relative;
+	.slider-controls {
+		> a {
+			top: 50%;
+			transform: translateY(-50%);
+			display: block;
+			height: auto;
+			span {
+				display: none;
+			}
+		}
+		.slider-prev-button {
+			left: 15px;
+			@media (min-width: 1200px) {
+				left: 54px;
+			}
+		}
+		.slider-next-button {
+			right: 15px;
+			text-align: right;
+			@media (min-width: 1200px) {
+				right: 54px;
+			}
+		}
+	}
 	.tns-outer {
 		position: relative;
 		.tns-nav {
@@ -416,6 +441,12 @@
 			display: none;
 			@media (min-width: 768px) {
 				display: block;
+			}
+			.image__style {
+				padding-top: calc(100vh - 40px) !important;
+				img {
+					object-fit: cover;
+				}
 			}
 		}
 		.image-mobile {
