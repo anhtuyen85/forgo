@@ -66,6 +66,14 @@
 		padding: 0 1.625rem;	
 		text-transform: uppercase;	
 	}
+	.image {
+		.image__style {
+			padding-top: calc(100vh - 40px) !important;
+			img {
+				object-fit: cover;
+			}
+		}
+	}
 }
 .article-content_header_back {
 	@include border-bottom;

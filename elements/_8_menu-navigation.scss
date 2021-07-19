@@ -226,7 +226,8 @@
 			}
 			&.active,
 			&:focus,
-			&:focus-within  {
+			&:focus-within,
+			&:focus-visible  {
 				background: var(--main-color);
 				border-color: var(--main-color);
 				> a {

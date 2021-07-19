@@ -1,4 +1,17 @@
 .announcement-bar {		
+	position: relative;
+	.announcement-bar-close {
+		@include ab(50%, n, n, 15px);
+		transform: translateY(-50%);
+		padding: 7px;
+		border-radius: 50%;
+		cursor: pointer;
+		svg {
+			width: 13px;
+			height: 13px;
+			display: flex;
+		}
+	}
 	.annoubar-column {
 		text-transform: uppercase;
 		@include font-small;  

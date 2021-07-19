@@ -55,18 +55,42 @@
 
 /* Section Icon List*/
 .home-icon-list {
+	.section_content-wrapper {
+		position: relative;		
+	}
+	.js-slider-controls {
+		a {
+			height: 40px;
+		}
+		.js-prev-button {
+			@media (min-width: 768px) {
+				left: 10%;
+			}
+			@media (min-width: 1440px) {
+				left: 15%;
+			}
+		}
+		.js-next-button {
+			@media (min-width: 768px) {
+				right: 10%;
+			}
+			@media (min-width: 1440px) {
+				right: 15%;
+			}
+		}
+	}
 	.slider-container {
 		text-align: center;		
 		.js-slider-controls {
 			> a {
+				top: -8px;
 				> span {
 					display: none;
 				}
 			}
 		}
 		.slider-wrapper {
-			margin: 0 auto;	
-			position: relative;					
+			margin: 0 auto;							
 			@media (min-width: 768px) {
 				width: 80%;
 				padding: 0 5%;

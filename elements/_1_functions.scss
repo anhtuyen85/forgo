@@ -121,8 +121,12 @@
   }
 }
 @mixin custom-btn {
-  padding: 6px 35px;
+  padding: 2px 35px;
 	@include font-small;
+  @media (min-width: 768px) {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
 }
 @mixin max-height-zero {
   max-height: 0;

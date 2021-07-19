@@ -154,16 +154,17 @@
   }  
   .number {
     @include ab(3px,50%,n,n);
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     background: var(--main-color);
     color: var(--text-miscellaneous);    
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    font-size: 10px;
     margin-left: 3px;
+    @extend %transition;
     @extend %radius-circle;
   }  
   .header-icons {
@@ -333,13 +334,17 @@
       &:hover {
         > a {
           background: var(--main-color);
-        color: var(--text-miscellaneous);
-        svg {
-          color: var(--text-miscellaneous) !important;
-          path, circle {
-            stroke: var(--text-miscellaneous) !important;
+          color: var(--text-miscellaneous);
+          .number {
+            background-color: white !important; 
+            color: black !important;
           }
-        }
+          svg {
+            color: var(--text-miscellaneous) !important;
+            path, circle {
+              stroke: var(--text-miscellaneous) !important;
+            }
+          }
         }
       }
     }
@@ -598,7 +603,7 @@
   .header-mobile__horizontal {    
     @extend %transition;
     @include visibility-hidden;    
-    @include fixed(47px,0,0,0);
+    @include fixed(48px,0,0,0);
     background: var(--body-bg-color);            
     padding-bottom: env(safe-area-inset-bottom);
     &.is-open {
@@ -661,6 +666,7 @@
       text-align: center;
       display: block;
       font-size: 12px;
+      @extend %transition;
       @extend %radius-circle;
     }
     .show-wishlist, .show-compare {
