@@ -411,6 +411,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		color: var(--btn1-cl);
+		background: var(--btn1-bg-cl);
+		border-color: var(--btn1-border-cl);
 		&:not(:last-child) {
 			@include border-right;
 		}			
@@ -421,7 +424,6 @@
 			pointer-events: none;
 		}	
 	}
-
 }
 .gtk-tablet {
 	@include border-top;

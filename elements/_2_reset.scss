@@ -431,7 +431,11 @@ svg path, svg g, svg circle {
     border-color: var(--btn1-hover-border-cl);
   }
 }
-
+.active-mobile {
+  color: var(--btn1-hover-cl);
+  background: var(--btn1-hover-bg-cl);
+  border-color: var(--btn1-hover-border-cl);
+}
 .btn-2 {
   font-weight: var(--btn2-fw);
   color: var(--btn2-cl);
