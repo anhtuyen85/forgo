@@ -520,8 +520,8 @@
 					flex: 0 0 50%;
 					max-width: 50%;
 				}
-			}
-			.slider-list {
+			}			
+			.slider-list {				
 				.product-card {
 					@media (max-width: 767px) {
 						&:after {
@@ -545,7 +545,7 @@
 					max-width: 33.333333%;
 					border-top: none;
 					&:after {
-						@include after-border;
+						// @include after-border;
 					}
 				}				
 			}
@@ -946,6 +946,7 @@
 	}
 }
 .slider-list {
+	display: flex;
 	.product-card {
 		@media (min-width: 768px) {
 			&:after {
