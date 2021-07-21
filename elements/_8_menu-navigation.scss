@@ -204,13 +204,11 @@
 		}
 	}
 }
-
 .header-mobile {
 	.menu-list {
 		>li.menu-item {			
-			> a {
-				padding-top: 11px;
-				padding-bottom: 11px;
+			> a {				
+				padding: 11px 20px;
 				flex: 1;
 				text-transform: uppercase;
 				line-height: 1.8;
@@ -219,22 +217,24 @@
 					text-transform: inherit;
 					color: var(--main-color) !important;
 
+				}				
+				&:active,
+				&:focus,
+				&:focus-within,
+				&:focus-visible {
+					background: var(--main-color);
+					color: var(--text-miscellaneous) !important;
+				}
+			}
+			&.active {
+				background: var(--main-color);
+				> a {
+					color: var(--text-miscellaneous) !important;
 				}
 			}
 			&.h-auto {
 				height: auto;
-			}
-			&.active,
-			&:focus,
-			&:focus-within,
-			&:focus-visible  {
-				background: var(--main-color);
-				border-color: var(--main-color);
-				> a {
-					color: var(--text-miscellaneous) !important;
-				}
-			}				
-						
+			}			
 		}
 	}
 	.mega-banner {

@@ -106,7 +106,7 @@
   letter-spacing: -1px;    
   font-size: 22px;
   line-height: 30px;
-  margin-bottom: 13px;
+  margin-bottom: 7px;
   @media (min-width: 768px) {
     font-size: 37px;    
     line-height: 49px;
@@ -120,8 +120,24 @@
     font-size: 22px;
   }
 }
+@mixin font-bigsize {
+  letter-spacing: -1px;
+  font-size: 22px;
+  font-weight: 600;
+  @media (min-width: 768px) {
+    font-size: 50px;
+  }
+}
+@mixin font-mediumsize {
+  letter-spacing: -1px;
+  font-size: 17px;
+  font-weight: 600;
+  @media (min-width: 768px) {
+    font-size: 30px;
+  }
+}
 @mixin custom-btn {
-  padding: 2px 35px;
+  padding: 1px 35px;
 	@include font-small;
   @media (min-width: 768px) {
     padding-top: 6px;

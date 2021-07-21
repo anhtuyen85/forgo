@@ -409,8 +409,7 @@
 		> a {
 			top: 50%;
 			transform: translateY(-50%);
-			display: block;
-			height: auto;
+			display: flex;			
 			span {
 				display: none;
 			}
@@ -422,8 +421,8 @@
 			}
 		}
 		.slider-next-button {
-			right: 15px;
-			text-align: right;
+			right: 15px;			
+			transform: translateY(-50%) rotate(180deg);
 			@media (min-width: 1200px) {
 				right: 54px;
 			}

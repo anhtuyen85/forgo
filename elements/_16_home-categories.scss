@@ -52,7 +52,7 @@
 					&:after {
 						content: '';
 						width: 1px;
-						background: var(--body-border-color);
+						background: var(--body-color);
 						@include ab(0, n, 0, 0);
 					}	
 				}				

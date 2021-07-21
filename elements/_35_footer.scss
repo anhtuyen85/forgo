@@ -56,6 +56,11 @@
 				}
 			}
 		}
+		input[type="email"] {
+			@include font-small;
+			font-weight: 500;
+			text-transform: uppercase;
+		}
 		.btn {
 			width: 100%;
 			// height: clamp(1.875rem, 3vw, 3.5rem);

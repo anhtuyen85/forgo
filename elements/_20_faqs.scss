@@ -2,11 +2,11 @@
     &:not(:last-child) {
         @include border-bottom;
     }
-    .care-item-heading {
-        @include font-size-small;
+    .care-item-heading {        
         @include fw-600;
-        text-transform: uppercase;				    
-        letter-spacing: -1px;    
+        line-height: 1.4;
+        font-size: var(--body-13);
+        text-transform: uppercase;				            
         height: 3.75rem;        
         padding: 0.625rem 1.75rem 0.625rem 1.563rem;				
         cursor: pointer;
@@ -19,6 +19,8 @@
             padding-left: 3rem;
             padding-right: 3rem;					            
             height: 5.625rem;
+            font-size: 27px;
+            letter-spacing: -1px;    
         }       
         .icon {					
             border: 1px solid var(--body-border-color);
@@ -27,10 +29,25 @@
             align-items: center;
             justify-content: center;
             margin-left: 15px;
-            width: 1.5rem;
-            height: 1.5rem;
-            flex: 0 0 1.5rem;
-            max-width: 1.5rem;
+            width: 18px;
+            height: 18px;
+            flex: 0 0 18px;
+            max-width: 18px;
+            svg {
+                width: 8px;
+                height: 8px;
+            }
+            @media (min-width: 768px) {
+                width: 31px;
+                height: 31px;
+                flex: 0 0 31px;
+                max-width: 31px;
+                border-width: 2px;
+                svg {
+                    width: 14px;
+                    height: 14px;
+                }
+            }            
         }
         svg:nth-child(2) {
             display: none;

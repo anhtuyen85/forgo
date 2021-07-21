@@ -501,8 +501,8 @@
     overflow-y: auto;
     >li {
       flex-wrap: nowrap;      
-      padding: 0 20px;
-      font-weight: 500;
+      padding: 0;
+      font-weight: 500;   
       &.title {
         text-align: center;
         background: var(--main-color);        
@@ -598,6 +598,11 @@
     svg {
       width: 26px;
       height: 26px;
+    }
+  }
+  .header-account-icon {
+    .icon svg {
+      width: 21px;
     }
   }
   .header-mobile__horizontal {    

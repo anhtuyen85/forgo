@@ -82,11 +82,14 @@
 			}
 			&:hover {
 				@media (hover:hover) {      
-				  color: var(--btn1-hover-cl);
-				  background: var(--btn1-hover-bg-cl);
-				  border-color: var(--btn1-hover-border-cl);
+					color: var(--btn1-hover-cl);
+					background: var(--btn1-hover-bg-cl);
+					border-color: var(--btn1-hover-border-cl);
 				}
-			  }
+			}
+		}
+		.js-next-button {
+			transform: rotate(0);
 		}
 	}
 	.js-slider-dots {
