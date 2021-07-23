@@ -5,7 +5,6 @@ html {
   font-size: var(--body-base-size);
   font-display: optional;
 }
-
 body {
   line-height: 1.4;
   background: var(--body-bg-color);
@@ -29,7 +28,6 @@ body {
   margin-bottom: -1px;
   overflow: hidden;
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -60,31 +58,25 @@ a {
   &:focus {
     outline: none;
   }
-
   &:hover {
     @media (hover:hover) {
       text-decoration: none;
     }
   }
 }
-
 p {
   margin: 20px 0;
 }
-
 ul, ol, dl {
   margin: 0;
 }
-
 ul, li, ol {
   list-style: none;
 }
-
 ul {
   padding: 0;
   list-style: disc inside none;
 }
-
 ol {
   padding: 0;
   list-style: decimal inside none;
@@ -105,22 +97,18 @@ ol {
 small {
   font-size: 80%;
 }
-
 sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
-
 sub {
   bottom: -.25rem;
 }
-
 sup {
   top: -.5rem;
 }
-
 label {
   display: inline-block;
   margin-bottom: 8px;
@@ -128,7 +116,6 @@ label {
 .pointer, .slide_ui-controls--dot button, .tns-nav button {
   cursor: pointer;
 }
-
 .clearfix::after {
   display: block;
   clear: both;
@@ -140,7 +127,6 @@ label {
 video {
   max-width: 100%;
 }
-
 button {
   border: none;
   outline: none;
@@ -152,17 +138,14 @@ button {
     box-shadow: 0 0 0 #fff;
   }
 }
-
 form {
   display: block;
   margin: 0;
 }
-
 select, input, textarea {
   background: none;
   appearance: none;
 }
-
 select:focus, input:focus, textarea:focus {
   outline: none;
 }
@@ -171,7 +154,6 @@ select, input {
   border: 1px solid var(--body-border-color);
   border-radius: 999px;
 }
-
 select {
   max-width: 100%;
   padding: 0 var(--gutter-md);
@@ -181,18 +163,15 @@ select {
     line-height: 2.5rem;
   }
 }
-
 input, textarea {
   padding: 0.313rem 1.5rem;
   @media (min-width: 768px) {
     padding: 0.625rem 2.125rem;
   }
 }
-
 input:focus, textarea:focus {
   border: 1px solid rgba(var(--main-color-rgba), 0.5);
 }
-
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, input:-moz-placeholder, textarea:-moz-placeholder, input::-moz-placeholder, textarea::-moz-placeholder, input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #BBBDC3;
 }
@@ -708,11 +687,11 @@ img {
     top: 0%;    
     @extend %radius-circle;
     path {
-      fill: var(--main-color);
+      fill: var(--body-color);
     }
     svg {
       text, tspan {
-        fill: var(--main-color);
+        fill: var(--body-color);
       }
     }
     &[aria-disabled="true"] {

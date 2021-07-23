@@ -105,12 +105,15 @@
 						}
 					}
 					.svg_element-ui {
-						@include ab(0, n, 0, 10px);
+						@include ab(0, n, 0, 0);
 						width: 40px;
 						display: flex;
 						align-items: center;
 						justify-content: center;
 						pointer-events: none;
+						@media (min-width: 768px) {
+							right: 10px;
+						}
 						svg {
 							width: 15px;
 							height: 7px;
@@ -299,6 +302,21 @@
 		background: none;
 	}
 }
+.rc-selling-plans {
+	position: relative;
+	.svg_element-ui {
+		@include ab(50%, n, n, 10px);
+		transform: translateY(-50%);
+		pointer-events: none;
+		@media (min-width: 768px) {
+			right: 20px;
+		}
+		svg {
+			width: 15px;
+			height: 7px;
+		}
+	}
+}
 .rc-widget-injection-parent {
 	flex: 0 0 100% !important; 
 	max-width: 100% !important;
@@ -333,6 +351,7 @@
 			text-transform: uppercase;		
 			@media (min-width: 768px) {				
 				height: 47px;		
+				padding-right: 2.5rem;
 				font-size: calc(var(--body-font-size) - 1px);							
 			}
 		}		
@@ -377,9 +396,12 @@
 			}
 		}
 		.svg_element-ui {
-			@include ab(50%, n, n, 20px);
+			@include ab(50%, n, n, 10px);
 			transform: translateY(-50%);
 			pointer-events: none;
+			@media (min-width: 768px) {
+				right: 20px;
+			}
 			svg {
 				width: 15px;
 				height: 7px;

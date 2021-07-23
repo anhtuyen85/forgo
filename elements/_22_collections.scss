@@ -85,6 +85,9 @@
                         @include after-border;
                     }
                 }
+                .image__style {
+                    padding-top: 125% !important;
+                }
             }    
         }           
     }
