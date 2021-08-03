@@ -41,14 +41,11 @@
                 text-transform: uppercase;
             }
             .btn {
-                margin-top: auto;                
-                height: 1.875rem;
+                margin-top: auto;                               
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                @media (min-width: 768px) {
-                    height: 2.5rem;
-                }
+                @include custom-btn;
             }
         }
     }
@@ -101,5 +98,15 @@
                 }
             }   
         }             
+    }
+}
+.template-collection {
+    @media (max-width: 767px) {
+        .product-card_footer {
+            margin-bottom: 0;
+        }
+        .btn {
+            display: none;
+        }
     }
 }

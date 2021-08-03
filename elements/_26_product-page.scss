@@ -415,8 +415,8 @@
 	margin-left: -1.625rem;
 	margin-right: -1.625rem;
 	max-width: calc(100% + 3.25rem);
-	flex: 0 0 calc(100% + 3.25rem);
-	@include border-top;
+	flex: 0 0 calc(100% + 3.25rem);	
+	@include border-top;	
 	@media (min-width: 992px) {
 		max-width: calc(100% + 6rem);
 		flex: 0 0 calc(100% + 6rem);
@@ -428,14 +428,16 @@
 		border: none;
 		border-radius: 0;
 		height: 45px;
-		padding-left: 15px;
-		padding-right: 15px;
-		display: flex;
-		justify-content: center;
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
+		display: flex;		
 		align-items: center;
 		color: var(--btn1-cl);
 		background: var(--btn1-bg-cl);
 		border-color: var(--btn1-border-cl);
+		@media (min-width: 768px) {
+			font-size: calc(var(--body-font-size) - 1px);
+		}
 		&:not(:last-child) {
 			@include border-right;
 		}			
@@ -486,7 +488,7 @@
 		margin: 0 -15px;		
 		list-style: none;
 		@media (min-width: 768px) {
-			font-size: calc(var(--body-font-size) + 2px);
+			font-size: var(--body-font-size);
 		}
 		li {
 			flex: 0 0 50%;
@@ -592,7 +594,10 @@
 			padding: 30px 28px;
 			@media (min-width: 768px) {
 				border-top: none;
-				padding: 35px 40px;				
+				padding: 35px 40px 2.5rem 40px;				
+			}
+			@media (min-width: 1400px) {
+				padding-bottom: 3.375rem;
 			}
 		}
 		.slider-wrapper {

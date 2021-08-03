@@ -109,6 +109,16 @@
 
 /*page about us*/
 .page-faq-content {
+	.card_section-item {
+		.image__style {
+			@media (min-width: 1200px) {
+				padding-top: calc(100vh - 132px) !important;
+				img {
+					object-fit: cover;
+				}
+			}
+		}
+	}
 	.d-grid {
 		&.grid-md-2 {
 			> div {
