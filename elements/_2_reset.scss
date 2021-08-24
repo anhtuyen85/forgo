@@ -1853,8 +1853,11 @@ img {
 #shopify-section-page-sustainability-template,
 #product-template,
 #shopify-section-page-blog-template,
-#shopify-section-product-template,
 #shopify-section-collection-template,
-#shopify-section-article-template {
+#shopify-section-article-template,
+#shopify-section-product-recommendation {
   border-bottom: none;
+}
+#admin-bar-iframe {
+	display: none;
 }
