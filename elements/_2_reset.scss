@@ -21,6 +21,7 @@ body {
   &:not(.template-index) {
     .footer {
       @include border-top;      
+      position: relative;
     }
   }
 }
