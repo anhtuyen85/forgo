@@ -18,12 +18,12 @@
 	}
 	.item {
 		padding: 1.5rem;
-		@include border-top;
-		margin-top: -1px;
+		@include border-bottom;		
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		height: 100%;
+		height: calc(100% + 1px);
+		margin-bottom: -1px;
 		@media (min-width: 768px) {
 			&:after {
 				@include after-border;
@@ -31,6 +31,14 @@
 		}		
 		@media (min-width: 1200px) {
 			padding: 45px 45px 36.6px;
+		}
+		.image {
+			.image__style {
+				padding-top: 125% !important;
+				img {
+					object-fit: cover;
+				}
+			}
 		}
 		.info {
 			padding: 1.25rem 0 0;

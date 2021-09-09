@@ -6,6 +6,7 @@
 	}
 	.blog-metafield {
 		@include border-bottom;
+		margin-top: -1px;
 		.card_section-item {
 			position: relative;
 			&:not(:last-child) {

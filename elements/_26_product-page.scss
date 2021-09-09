@@ -132,7 +132,7 @@
 					font-size: calc(var(--body-font-size) - 1px);							
 				}
 				@media (min-width: 992px) {
-					padding-left: 5.625rem;
+					padding-left: 110px;
 				}
 				@media (min-width: 768px) {							
 					height: 45px;						
@@ -152,7 +152,7 @@
 					left: 110px;
 				}
 				@media (min-width: 992px) {
-					left: 170px;
+					left: 180px;
 				}
 			}
 			.svg_element-ui {
@@ -350,6 +350,17 @@
 	.rc_widget__option__selector,
 	.rc_popup {
 		display: none;
+	}
+	.rc-selling-plans__label {
+		border: 0;
+		clip: rect(0, 0, 0, 0);
+		height: 1px;
+		width: 1px;
+		margin: -1px;
+		padding: 0;
+		overflow: hidden;
+		white-space: nowrap;
+		position: absolute;
 	}
 	.rc_widget__option__plans {
 		// display: none !important;		
