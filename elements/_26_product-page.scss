@@ -75,12 +75,14 @@
 		}
 		.media-item {
 			position: relative;
-			&:after {
-				content: '';
-				width: 1px;
-				background: var(--body-color);
-				@include ab(0, n, 0, 0);
-			}
+			@media (min-width: 768px) {
+				&:after {
+					content: '';
+					width: 1px;
+					background: var(--body-color);
+					@include ab(0, n, 0, 0);
+				}
+			}			
 		}
 		.js-slider-controls {
 			> a {
@@ -705,7 +707,7 @@
 		}
 		.video-content {
 			position: relative;
-			padding-bottom: 106.25%;
+			padding-bottom: 100%;
 			height: 0;
 			overflow: hidden;	
 			@media (min-width: 768px) {
@@ -723,9 +725,11 @@
 			}
 		}
 		&.fit-image {
-			.video-content {
-				padding: 0;
-				height: 100%;
+			.video-content {				
+				@media (min-width: 768px) {
+					padding: 0;
+					height: 100%;
+				}
 			}
 			.image-item {
 				@media (min-width: 768px) {					
