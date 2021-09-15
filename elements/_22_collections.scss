@@ -63,7 +63,7 @@
 .product-type-content {
     .product-card {
         position: relative;       
-        @include border-bottom;                 
+        @include border-bottom;                      
     }
     &.grid-2 {
         @media (max-width: 767px) {

@@ -3,7 +3,8 @@ html {
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   font-size: var(--body-base-size);
-  font-display: optional;
+  font-display: optional;  
+  padding-bottom: 0 !important;
 }
 body {
   line-height: 1.4;
@@ -815,9 +816,14 @@ img {
     position: relative;    
   }
   .imageCrop-true {
-    .product-card_image img {
-      object-fit: cover;
-    }
+    .product-card_image {
+      .image__style {
+          padding-top: 125% !important;
+          img {
+              object-fit: cover;
+          }
+      }
+    }       
   }
   .product-card_body {
     padding: 0 1.125rem 0.625rem; 
@@ -1405,12 +1411,13 @@ img {
 }
 .cart-item {
   display: flex;  
+  position: relative;
   @include border-bottom;
   .image {         
     @include border-right;
     flex: 0 0 50%;
     max-width: 50%;
-    position: relative;
+    position: relative;    
     @media (min-width: 1400px) {
       max-width: 180px;
       flex: 0 0 180px;      
@@ -1434,13 +1441,19 @@ img {
     border: 1px solid var(--body-color);
     flex: 0 0 26px;
     height: 26px;
+    width: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--body-color);
     border-radius: 50%;
-    margin: 1.25rem 0.938rem;    
-    display: none;
+    // margin: 1.25rem 0.938rem;  
+    z-index: 2;
+    margin-left: -40px;
+    @include ab(15px, 50%, n, n);
+    @media (min-width: 1440px) {
+      left: 180px;
+    }
     svg {
       width: 10px;
       height: 10px;
@@ -1855,6 +1868,9 @@ img {
 }
 .shopify-section {
   @include border-bottom;
+  &:empty {
+    display: none;
+  }
 }
 #shopify-section-cart-template,
 #shopify-section-page-faq-template,
@@ -1897,4 +1913,26 @@ img {
     }
   }  
 }
-  
+.locale-selectors__container {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;  
+  @media (min-width: 768px) {
+    @include ab(n, n, 0, 1.5rem);
+  }
+  @media (min-width: 1200px) {
+    right: 2.813rem;
+  }
+}
+.locale-selectors__content {
+  justify-content: center !important;
+  @media (min-width: 768px) {
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+#preview-bar-iframe {
+  display: none !important;
+}

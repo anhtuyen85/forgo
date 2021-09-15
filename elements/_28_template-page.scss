@@ -535,7 +535,30 @@
 							}
 						}
 					}
-				}				
+				}	
+				.image-wrapper:not(.has-text) {
+					.image {
+						.image__style {
+							padding-top: 106.25% !important;
+							img {
+								object-fit: cover;
+							}
+						}
+					}
+				}							
+			}
+			.grid-1:not(.grid-md-2) {
+				.image {
+					.image__style {						
+						padding-top: 106.25% !important;
+						@media (min-width: 768px) {
+							padding-top: 43.75% !important;
+						}
+						img {
+							object-fit: cover;
+						}
+					}
+				}
 			}
 			&:not(:last-child) {
 				@include border-bottom;
