@@ -355,12 +355,14 @@
 			padding: 0;
 			height: 100%;
 		}
-		iframe {
+		iframe,
+		video {
 			max-width: 100%;
 			display: block;				
 			width: 100%;
 			height: 100%;
-			pointer-events: none;
+			// pointer-events: none;
+			object-fit: cover;
 			border: none;
 			@include ab(0, 0, n, n);
 		}
