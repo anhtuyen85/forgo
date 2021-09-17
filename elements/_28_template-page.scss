@@ -247,8 +247,14 @@
 /* Sustainability */
 .section-sustainability {
 	.paragraph-image_content {
-		@include border-bottom;
+		@include border-bottom;		
+		&:empty {
+			display: none;
+		}
 		.d-grid {
+			&:empty {
+				display: none;
+			}
 			&:not(.grid-md-2) {
 				> div {
 					&:not(:last-child) {

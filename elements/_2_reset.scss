@@ -545,7 +545,9 @@ img {
   top: 0;
   word-break: break-word;
 }
-
+.slider-item:not(.no-lazy) .lazyloaded {
+  object-fit: cover;
+}
 .f-break {
   padding: 0 var(--gutter-xs);
   width: 100vw !important;
