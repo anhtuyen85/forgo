@@ -400,7 +400,8 @@
 			text-transform: uppercase;
 			margin-bottom: 20px;
 			padding: 0 0 12px;
-			line-height: 22px;			
+			line-height: 22px;		
+			line-height: 1.4;	
 			@include border-bottom;		
 			@media (max-width: 767px) {
 				font-size: var(--body-13);
