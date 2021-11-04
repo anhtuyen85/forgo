@@ -232,7 +232,7 @@
         padding: 0.625rem 1.813rem;
         cursor: pointer;
         @include border-bottom;
-        user-select: none;
+        // user-select: none;
         font-weight: 400;        
       }
       .ha-dropdown {

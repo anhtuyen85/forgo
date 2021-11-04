@@ -103,7 +103,7 @@
   text-transform: uppercase;
 }
 @mixin font-size-big {
-  letter-spacing: -1px;    
+  // letter-spacing: -1px;    
   font-size: 22px;
   line-height: 30px;
   margin-bottom: 7px;

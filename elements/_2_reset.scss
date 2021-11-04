@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   position: relative;
-  user-select: none;
+  // user-select: none;
   &:not(.template-index) {
     .footer {
       @include border-top;      
@@ -583,12 +583,12 @@ img {
 }
 
 .tns-inner .tns-item {
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  // -ms-touch-action: pan-y;
+  // touch-action: pan-y;
+  // -webkit-user-select: none;
+  // -moz-user-select: none;
+  // -ms-user-select: none;
+  // user-select: none;
 }
 .media-thumbnails:not(.tns-carousel), .media-main:not(.tns-carousel) {
   >div {

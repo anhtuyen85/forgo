@@ -63,7 +63,7 @@ h6, .h6 {
     color: var(--section-heading-cl);
     font-weight: var(--section-heading-fw);    
     @include fw-600;
-    @include letter-spacing;
+    // @include letter-spacing;
     svg {
       margin-right: var(--gutter-xs);
     }

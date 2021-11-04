@@ -83,7 +83,7 @@
 		}
 	}
 	.slider-container {
-		text-align: center;		
+		text-align: center;				
 		.js-slider-controls {
 			> a {
 				top: -8px;
@@ -103,10 +103,32 @@
 			}
 		}
 	}
+	.section_content-body {
+		.slider-container {			
+			@media (max-width: 767px) {
+				display: none;
+			}
+		}
+	}
 	.card_section-item {		
 		.card_section-figure {
 			display: flex;
 			justify-content: center;
+		}
+	}
+	.slider-item {
+		.icon {
+			text-align: center;
+			margin: 1rem auto auto;
+			max-width: 270px;
+			@media (min-width: 768px) {
+				display: none;				
+			}
+			@media (max-width: 767px) {
+				svg {
+					max-width: 100%;
+				}
+			}
 		}
 	}
 }
