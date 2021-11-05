@@ -1220,6 +1220,25 @@
 	}
 }
 .template-preorder {
+	.product-des-text {
+		h1 {
+			font-size: 17px;
+			line-height: 1.35;
+			@media (min-width: 768px) {
+				font-size: 30px;
+				line-height: 1.48;
+			}
+		}
+	}
+	.limit-text {
+		color: #0F63FF;
+		font-size: 17px;
+		line-height: 1.35;
+		@media (min-width: 768px) {
+			font-size: 30px;
+			line-height: 1.48;
+		}
+	}
 	.product-wrapper .form-group-btn {		
 		padding-left: 1.625rem;
 		padding-right: 1.625rem;
