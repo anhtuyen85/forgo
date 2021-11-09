@@ -28,7 +28,7 @@ body {
 }
 #main-content {
   margin-bottom: -1px;
-  overflow: hidden;
+  // overflow: hidden;
 }
 * {
   box-sizing: border-box;
@@ -826,6 +826,9 @@ img {
       padding: 20px;
       z-index: 1;
       color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s ease-in-out 0s;
       @include ab(0, 0, n, 0);
       @media (min-width: 992px) {
         font-size: 18px;
@@ -853,6 +856,7 @@ img {
       }
       @media (hover : hover) {
         &:hover {
+          .textbox,
           .img-back {
             visibility: visible;
             opacity: 1;
