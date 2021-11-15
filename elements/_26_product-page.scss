@@ -1296,20 +1296,47 @@
 		.checkbox-container {
 			display: flex;
 			align-items: center;
+			position: relative;
 			input {
 				width: 21px;
 				height: 21px;
 				padding: 0;				
 				border-radius: 0;
 				margin-right: 10px;
-				-webkit-appearance: auto;
-				-moz-appearance: auto;
-				appearance: auto;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				opacity: 0;
+				@include ab(0, 0, n, n);
 			}
 			label {
+				position: relative;
 				margin: 0;
 				user-select: none;
-				font-size: calc(var(--body-font-size) - 2px);
+				font-size: calc(var(--body-font-size) - 2px);	
+				padding-left: 30px;
+				&:after, &:before {
+					content: '';
+					width: 21px;
+					height: 21px;
+					border: 1px solid var(--body-border-color);
+					transform: translateY(-50%);
+					@include ab(50%, 0, n, n);
+				}						
+				&:before {					
+					background-image: url("data:image/svg+xml,%3Csvg width='15' height='' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L4 7L9 1' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+					background-repeat: no-repeat;
+					background-position: center;
+					display: none;
+				}
+			}
+			input:checked + label {
+				&:after {
+					display: none;
+				}
+				&:before {
+					display: block;
+				}
 			}
 		}
 	}
